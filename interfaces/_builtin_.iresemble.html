@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;builtin&quot; | gondolajs</title>
+	<title>IResemble | gondolajs</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,31 +56,138 @@
 					<a href="../index.html">Globals</a>
 				</li>
 				<li>
-					<a href="_builtin_.html">&quot;builtin&quot;</a>
+					<a href="../modules/_builtin_.html">&quot;builtin&quot;</a>
+				</li>
+				<li>
+					<a href="_builtin_.iresemble.html">IResemble</a>
 				</li>
 			</ul>
-			<h1>External module &quot;builtin&quot;</h1>
+			<h1>Interface IResemble</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">IResemble</span>
+					</li>
+				</ul>
+			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Interfaces</h3>
+							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-interface tsd-parent-kind-external-module"><a href="../interfaces/_builtin_.igondola.html" class="tsd-kind-icon">IGondola</a></li>
-								<li class="tsd-kind-interface tsd-parent-kind-external-module"><a href="../interfaces/_builtin_.igondolamobile.html" class="tsd-kind-icon">IGondola<wbr>Mobile</a></li>
-								<li class="tsd-kind-interface tsd-parent-kind-external-module"><a href="../interfaces/_builtin_.ilocator.html" class="tsd-kind-icon">ILocator</a></li>
-								<li class="tsd-kind-interface tsd-parent-kind-external-module"><a href="../interfaces/_builtin_.iresemble.html" class="tsd-kind-icon">IResemble</a></li>
-								<li class="tsd-kind-interface tsd-parent-kind-external-module"><a href="../interfaces/_builtin_.irestapi.html" class="tsd-kind-icon">IRest<wbr>Api</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_builtin_.iresemble.html#seevisualdiff" class="tsd-kind-icon">see<wbr>Visual<wbr>Diff</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_builtin_.iresemble.html#seevisualdiffforelement" class="tsd-kind-icon">see<wbr>Visual<wbr>Diff<wbr>For<wbr>Element</a></li>
 							</ul>
 						</section>
 					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="seevisualdiff" class="tsd-anchor"></a>
+					<h3>see<wbr>Visual<wbr>Diff</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">see<wbr>Visual<wbr>Diff<span class="tsd-signature-symbol">(</span>baseImage<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in builtin.ts:466</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Check Visual Difference for Base and Screenshot Image</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>experimental</dt>
+									<dd><p>v1</p>
+										<blockquote>
+											<p>Can be changed or removed soon</p>
+										</blockquote>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>baseImage: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Name of the Base Image (Base Image path is taken from Configuration)</p>
+									</div>
+								</li>
+								<li>
+									<h5>options: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Options ex {prepareBaseImage: true, tolerance: 5} along with Resemble JS Options, read more here: <a href="https://github.com/rsmbl/Resemble.js">https://github.com/rsmbl/Resemble.js</a></p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="seevisualdiffforelement" class="tsd-anchor"></a>
+					<h3>see<wbr>Visual<wbr>Diff<wbr>For<wbr>Element</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">see<wbr>Visual<wbr>Diff<wbr>For<wbr>Element<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, baseImage<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in builtin.ts:477</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>See Visual Diff for an Element on a Page</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>experimental</dt>
+									<dd><p>v1</p>
+										<blockquote>
+											<p>Can be changed or removed soon</p>
+										</blockquote>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>selector: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Selector which has to be compared, CSS|XPath|ID</p>
+									</div>
+								</li>
+								<li>
+									<h5>baseImage: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Base Image for comparison</p>
+									</div>
+								</li>
+								<li>
+									<h5>options: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Options ex {prepareBaseImage: true, tolerance: 5} along with Resemble JS Options, read more here: <a href="https://github.com/rsmbl/Resemble.js">https://github.com/rsmbl/Resemble.js</a></p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
 				</section>
 			</section>
 		</div>
@@ -91,26 +198,38 @@
 						<a href="../index.html"><em>Globals</em></a>
 					</li>
 					<li class="current tsd-kind-external-module">
-						<a href="_builtin_.html">"builtin"</a>
+						<a href="../modules/_builtin_.html">"builtin"</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="../interfaces/_builtin_.igondola.html" class="tsd-kind-icon">IGondola</a>
+						<a href="_builtin_.igondola.html" class="tsd-kind-icon">IGondola</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="../interfaces/_builtin_.igondolamobile.html" class="tsd-kind-icon">IGondola<wbr>Mobile</a>
+						<a href="_builtin_.igondolamobile.html" class="tsd-kind-icon">IGondola<wbr>Mobile</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="../interfaces/_builtin_.ilocator.html" class="tsd-kind-icon">ILocator</a>
+						<a href="_builtin_.ilocator.html" class="tsd-kind-icon">ILocator</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="../interfaces/_builtin_.iresemble.html" class="tsd-kind-icon">IResemble</a>
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="_builtin_.iresemble.html" class="tsd-kind-icon">IResemble</a>
+						<ul>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="_builtin_.iresemble.html#seevisualdiff" class="tsd-kind-icon">see<wbr>Visual<wbr>Diff</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="_builtin_.iresemble.html#seevisualdiffforelement" class="tsd-kind-icon">see<wbr>Visual<wbr>Diff<wbr>For<wbr>Element</a>
+							</li>
+						</ul>
 					</li>
+				</ul>
+				<ul class="after-current">
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="../interfaces/_builtin_.irestapi.html" class="tsd-kind-icon">IRest<wbr>Api</a>
+						<a href="_builtin_.irestapi.html" class="tsd-kind-icon">IRest<wbr>Api</a>
 					</li>
 				</ul>
 			</nav>
