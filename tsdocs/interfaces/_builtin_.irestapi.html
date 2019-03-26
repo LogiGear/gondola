@@ -99,6 +99,7 @@
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_builtin_.irestapi.html#checkresponsestatus" class="tsd-kind-icon">check<wbr>Response<wbr>Status</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_builtin_.irestapi.html#senddeleterequest" class="tsd-kind-icon">send<wbr>Delete<wbr>Request</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_builtin_.irestapi.html#sendgetrequest" class="tsd-kind-icon">send<wbr>Get<wbr>Request</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_builtin_.irestapi.html#sendpatchrequest" class="tsd-kind-icon">send<wbr>Patch<wbr>Request</a></li>
@@ -113,16 +114,61 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="senddeleterequest" class="tsd-anchor"></a>
-					<h3>send<wbr>Delete<wbr>Request</h3>
+					<a name="checkresponsestatus" class="tsd-anchor"></a>
+					<h3>check<wbr>Response<wbr>Status</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">send<wbr>Delete<wbr>Request<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, headers<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">__type</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">check<wbr>Response<wbr>Status<span class="tsd-signature-symbol">(</span>response<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, expected<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:430</li>
+									<li>Defined in builtin.ts:453</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>parse response data</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>experimental</dt>
+									<dd><p>v1</p>
+										<blockquote>
+											<p>Can be changed or removed soon</p>
+										</blockquote>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>response: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>data response from server</p>
+									</div>
+								</li>
+								<li>
+									<h5>expected: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>expected status value</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="senddeleterequest" class="tsd-anchor"></a>
+					<h3>send<wbr>Delete<wbr>Request</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">send<wbr>Delete<wbr>Request<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, headers<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">__type</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in builtin.ts:444</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -153,7 +199,7 @@
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -161,13 +207,13 @@
 					<a name="sendgetrequest" class="tsd-anchor"></a>
 					<h3>send<wbr>Get<wbr>Request</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">send<wbr>Get<wbr>Request<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, headers<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">__type</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">send<wbr>Get<wbr>Request<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, headers<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">__type</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:390</li>
+									<li>Defined in builtin.ts:404</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -198,7 +244,7 @@
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -206,13 +252,13 @@
 					<a name="sendpatchrequest" class="tsd-anchor"></a>
 					<h3>send<wbr>Patch<wbr>Request</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">send<wbr>Patch<wbr>Request<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, payload<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">__type</span>, headers<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">__type</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">send<wbr>Patch<wbr>Request<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, payload<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">__type</span>, headers<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">__type</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:410</li>
+									<li>Defined in builtin.ts:424</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -249,7 +295,7 @@
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -257,13 +303,13 @@
 					<a name="sendpostrequest" class="tsd-anchor"></a>
 					<h3>send<wbr>Post<wbr>Request</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">send<wbr>Post<wbr>Request<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, payload<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">__type</span>, headers<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">__type</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">send<wbr>Post<wbr>Request<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, payload<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">__type</span>, headers<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">__type</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:400</li>
+									<li>Defined in builtin.ts:414</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -300,7 +346,7 @@
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -308,13 +354,13 @@
 					<a name="sendputrequest" class="tsd-anchor"></a>
 					<h3>send<wbr>Put<wbr>Request</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">send<wbr>Put<wbr>Request<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, payload<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">__type</span>, headers<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">__type</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">send<wbr>Put<wbr>Request<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, payload<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">__type</span>, headers<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">__type</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:420</li>
+									<li>Defined in builtin.ts:434</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -351,7 +397,7 @@
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -365,7 +411,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:381</li>
+									<li>Defined in builtin.ts:395</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -423,6 +469,9 @@
 					<li class="current tsd-kind-interface tsd-parent-kind-external-module">
 						<a href="_builtin_.irestapi.html" class="tsd-kind-icon">IRest<wbr>Api</a>
 						<ul>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="_builtin_.irestapi.html#checkresponsestatus" class="tsd-kind-icon">check<wbr>Response<wbr>Status</a>
+							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="_builtin_.irestapi.html#senddeleterequest" class="tsd-kind-icon">send<wbr>Delete<wbr>Request</a>
 							</li>
