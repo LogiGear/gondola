@@ -116,19 +116,26 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:324</li>
+									<li>Defined in builtin.ts:648</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Checks that expected App is installed already</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript">
+gondola.checkAppIsInstalled(<span class="hljs-string">"com.example.appName);</span></code></pre>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>appPackageId: <span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
+										<p>app package name</p>
 									</div>
 								</li>
 							</ul>
@@ -146,13 +153,21 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:351</li>
+									<li>Defined in builtin.ts:681</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Gets the WebDriver browser</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript">
+<span class="hljs-keyword">const</span> browser = <span class="hljs-keyword">await</span> gondola.getCurrentBrowser();
+<span class="hljs-keyword">const</span> element = <span class="hljs-keyword">await</span> browser.findElement(<span class="hljs-string">"accessibility id"</span>, <span class="hljs-string">"exampleId"</span>);
+*</code></pre>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Client</span>
 								<span class="tsd-signature-symbol"> &amp; </span>
@@ -171,13 +186,21 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:372</li>
+									<li>Defined in builtin.ts:709</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Retrieve element&#39;s boundary</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript">
+<span class="hljs-keyword">let</span> bound = <span class="hljs-keyword">await</span> gondola.getElementBounds(<span class="hljs-string">"~accessibleId"</span>);
+<span class="hljs-keyword">let</span> right = bound.left + bound.width;
+<span class="hljs-keyword">let</span> bottom = bound.top + bound.height;</code></pre>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -202,7 +225,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:346</li>
+									<li>Defined in builtin.ts:670</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -234,22 +257,48 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:311</li>
+									<li>Defined in builtin.ts:608</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Runs the given function while testing Android</p>
 								</div>
+								<p>Note: in case use options capabilities, remember that action only work if
+								this option is declared in the gondola config file.</p>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript">
+gondola.runOnAndroid(<span class="hljs-keyword">async</span> () =&gt; {
+ <span class="hljs-keyword">await</span> gondola.tap(<span class="hljs-string">"~accessibleId"</span>);
+ <span class="hljs-comment">// ...</span>
+})
+
+<span class="hljs-comment">// Filter can be applied by checking for capabilities. This code only run on Android 7.0</span>
+gondola.runOnAndroid({platformVersion: <span class="hljs-string">'7.0'</span>}, <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span>{
+ <span class="hljs-comment">// ...</span>
+})
+
+<span class="hljs-comment">// Capabilities can be checked by a function. In this case , code will be executed only on android &gt;= 6</span>
+gondola.runOnAndroid(<span class="hljs-function">(<span class="hljs-params">cap</span>) =&gt;</span> {<span class="hljs-keyword">return</span> cap.platformVersion &gt;= <span class="hljs-number">6</span>}, <span class="hljs-function"><span class="hljs-params">()</span>=&gt;</span>{
+ <span class="hljs-comment">// ...</span>
+})
+</code></pre>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>capabilities use to filter</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> fn: <span class="tsd-signature-type">Function</span></h5>
 									<div class="tsd-comment tsd-typography">
+										<p>callback function will be executed</p>
 									</div>
 								</li>
 							</ul>
@@ -267,22 +316,48 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:318</li>
+									<li>Defined in builtin.ts:637</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Runs the given function while testing iOS</p>
 								</div>
+								<p>Note: in case use options capabilities, remember that action only work if
+								this option is declared in the gondola config file.</p>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript">
+gondola.runOnIOS(<span class="hljs-keyword">async</span> () =&gt; {
+ <span class="hljs-keyword">await</span> gondola.tap(<span class="hljs-string">"~accessibleId"</span>);
+ <span class="hljs-comment">// ...</span>
+})
+
+<span class="hljs-comment">// Filter can be applied by checking for capabilities. This code only run on runOnIOS 6.0</span>
+gondola.runOnIOS({platformVersion: <span class="hljs-string">'6.0'</span>}, <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span>{
+ <span class="hljs-comment">// ...</span>
+})
+
+<span class="hljs-comment">// Capabilities can be checked by a function. In this case , code will be executed only on runOnIOS &gt;= 6</span>
+gondola.runOnIOS(<span class="hljs-function">(<span class="hljs-params">cap</span>) =&gt;</span> {<span class="hljs-keyword">return</span> cap.platformVersion &gt;= <span class="hljs-number">6</span>}, <span class="hljs-function"><span class="hljs-params">()</span>=&gt;</span>{
+ <span class="hljs-comment">// ...</span>
+})
+</code></pre>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>capabilities use to filter</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> fn: <span class="tsd-signature-type">Function</span></h5>
 									<div class="tsd-comment tsd-typography">
+										<p>callback function will be executed</p>
 									</div>
 								</li>
 							</ul>
@@ -300,7 +375,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:366</li>
+									<li>Defined in builtin.ts:696</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -344,13 +419,19 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:380</li>
+									<li>Defined in builtin.ts:722</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Perform a swipe on an element.</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript">
+<span class="hljs-keyword">await</span> gondola.swipe(<span class="hljs-string">"~accessibleId"</span>,<span class="hljs-number">0</span>, <span class="hljs-number">-1000</span>);</code></pre>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -365,8 +446,6 @@
 								</li>
 								<li>
 									<h5>offsetY: <span class="tsd-signature-type">number</span></h5>
-									<div class="tsd-comment tsd-typography">
-									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -383,13 +462,19 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:389</li>
+									<li>Defined in builtin.ts:736</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Perform a swipe on the screen.</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript">
+<span class="hljs-keyword">await</span> gondola.swipeByCoordinates(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">600</span>);</code></pre>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -404,8 +489,6 @@
 								</li>
 								<li>
 									<h5>offsetY: <span class="tsd-signature-type">number</span></h5>
-									<div class="tsd-comment tsd-typography">
-									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -422,7 +505,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:336</li>
+									<li>Defined in builtin.ts:660</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -464,7 +547,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:304</li>
+									<li>Defined in builtin.ts:579</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">

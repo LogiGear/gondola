@@ -144,13 +144,22 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:68</li>
+									<li>Defined in builtin.ts:116</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Checks that a given Element is visible.</p>
+									<p>Check for the existence of a control. Result is Passed if the specified control is found; otherwise Failed.</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript">
+<span class="hljs-keyword">await</span> gondola.checkControlExist(<span class="hljs-string">"#elementId"</span>); <span class="hljs-comment">//check control exist with id "elementId".</span>
+<span class="hljs-keyword">await</span> gondola.checkControlExist(<span class="hljs-string">"Login"</span>); <span class="hljs-comment">//check control containing "Login" exist.</span>
+<span class="hljs-keyword">await</span> gondola.checkControlExist({name : <span class="hljs-string">"submit"</span>}); <span class="hljs-comment">//check control that have property "name=submit" exist.</span>
+</code></pre>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -175,13 +184,22 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:74</li>
+									<li>Defined in builtin.ts:130</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Opposite to <code>checkControlExist</code>. Checks that element is not visible.</p>
+									<p>Check for the nonexistence of a control. Result is Passed if the specified control is not found; otherwise Failed.</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript">
+<span class="hljs-keyword">await</span> gondola.checkControlNotExist(<span class="hljs-string">"#elementId"</span>); <span class="hljs-comment">//check control not exist with id "elementId".</span>
+<span class="hljs-keyword">await</span> gondola.checkControlNotExist(<span class="hljs-string">"Login"</span>); <span class="hljs-comment">//check control containing "Login" not exist.</span>
+<span class="hljs-keyword">await</span> gondola.checkControlNotExist({name : <span class="hljs-string">"submit"</span>}); <span class="hljs-comment">//check control that have property "name=submit" not exist.</span>
+</code></pre>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -206,13 +224,20 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:82</li>
+									<li>Defined in builtin.ts:144</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Checks first element with given locator have given attribute.</p>
+									<p>Checks first element with given locator have given attribute.Result is Passed if the values match; otherwise Failed.</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript">
+<span class="hljs-keyword">await</span> gondola.checkControlProperty(<span class="hljs-string">"#buttonId1"</span>,<span class="hljs-string">"name"</span>,<span class="hljs-string">"Button 1"</span>); <span class="hljs-comment">//Compare the value of property "name" from control with id "buttonId1" against an expected value.</span>
+</code></pre>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -249,13 +274,21 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:30</li>
+									<li>Defined in builtin.ts:37</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Tests for deep equality between the actual and expected parameters.</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript">
+<span class="hljs-keyword">let</span> value = <span class="hljs-keyword">await</span> gondola.getText(<span class="hljs-string">"#elementId"</span>);
+gondola.checkEqual(value, <span class="hljs-string">"Hello"</span>);
+gondola.checkEqual(value, <span class="hljs-string">"Hi"</span>, <span class="hljs-string">"value should be 'Hi'"</span>);</code></pre>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -292,13 +325,31 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:282</li>
+									<li>Defined in builtin.ts:557</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>check JSON value by JSON path</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript">
+<span class="hljs-keyword">const</span> data = [
+ {
+   id: <span class="hljs-number">1</span>,
+   title: <span class="hljs-string">"This is title 1"</span>
+ },
+ {
+   id: <span class="hljs-number">2</span>,
+   title: <span class="hljs-string">"This is title 2"</span>,
+ }
+];
+
+<span class="hljs-keyword">const</span> value = <span class="hljs-keyword">await</span> gondola.checkJSONValue(data, <span class="hljs-string">"[0].title"</span>, <span class="hljs-string">"This is title 1"</span>);
+</code></pre>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -310,8 +361,6 @@
 								</li>
 								<li>
 									<h5>expected: <span class="tsd-signature-type">any</span></h5>
-									<div class="tsd-comment tsd-typography">
-									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -328,13 +377,21 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:38</li>
+									<li>Defined in builtin.ts:52</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Tests for deep strict inequality</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript">
+<span class="hljs-keyword">let</span> value = <span class="hljs-keyword">await</span> gondola.getText(<span class="hljs-string">"#elementId"</span>);
+gondola.checkNotEqual(value, <span class="hljs-string">"Hello"</span>);
+gondola.checkEqual(value, <span class="hljs-string">"Hi"</span>, <span class="hljs-string">"value should not equal 'Hi'"</span>);</code></pre>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -371,13 +428,20 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:106</li>
+									<li>Defined in builtin.ts:192</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Check text from the located element with given value.</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript">
+<span class="hljs-keyword">await</span> gondola.checkText({<span class="hljs-string">"xpath"</span>:<span class="hljs-string">"//input[@name='button_ControlTest']"</span>},<span class="hljs-string">"ButtonTest"</span>); <span class="hljs-comment">//Compare the text from control captured with xpath against an expected value.</span>
+</code></pre>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -405,13 +469,20 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:88</li>
+									<li>Defined in builtin.ts:156</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Checks that title is equal to provided one.</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript">
+<span class="hljs-keyword">await</span> gondola.checkWindowExist(<span class="hljs-string">"Scrum Board"</span>); <span class="hljs-comment">//Check for the existence of a window that title is "Scrum Board"</span>
+</code></pre>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -436,13 +507,22 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:45</li>
+									<li>Defined in builtin.ts:67</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Perform a click on a link or a button, given by a locator.</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript">
+<span class="hljs-keyword">await</span> gondola.click(<span class="hljs-string">"#elementId"</span>); <span class="hljs-comment">//click on element with id "elementId"</span>
+<span class="hljs-keyword">await</span> gondola.click(<span class="hljs-string">"Login"</span>); <span class="hljs-comment">//click on button or link containing "Login"</span>
+<span class="hljs-keyword">await</span> gondola.click({name : <span class="hljs-string">"submit"</span>}, <span class="hljs-string">"#user&gt;form"</span>)
+</code></pre>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -473,13 +553,20 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:53</li>
+									<li>Defined in builtin.ts:81</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Click on the active JavaScript native popup window, as created by window.alert|window.confirm|window.prompt.</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript">
+gondola.clickPopup(<span class="hljs-string">"ok"</span>);
+</code></pre>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -508,13 +595,20 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:58</li>
+									<li>Defined in builtin.ts:92</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Close current tab</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript">
+gondola.closeCurrentTab();
+</code></pre>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
@@ -530,13 +624,20 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:63</li>
+									<li>Defined in builtin.ts:103</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Close all tabs except for the current one.</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript">
+gondola.closeOtherTabs();
+</code></pre>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
@@ -552,13 +653,21 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:112</li>
+									<li>Defined in builtin.ts:205</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Clears all cookies.</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript">
+gondola.deleteCookie();
+gondola.deleteCookie(<span class="hljs-string">"test"</span>);
+</code></pre>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -583,13 +692,20 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:119</li>
+									<li>Defined in builtin.ts:218</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Checks that a given Element is visible.</p>
+									<p>Return a Boolean value to indicate whether the specified control is found to exist.Returned Boolean value is 1 if control is found.Otherwise return 0</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript">
+<span class="hljs-keyword">let</span> variable = <span class="hljs-keyword">await</span> gondola.doesControlExist(<span class="hljs-string">"#button_ControlTest"</span>,<span class="hljs-literal">true</span>); <span class="hljs-comment">//Return value whether the control with id "button_ControlTest" exist.</span>
+</code></pre>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -617,13 +733,20 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:125</li>
+									<li>Defined in builtin.ts:231</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Fills a text field or textarea, after clearing its value, with the given string.</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript">
+<span class="hljs-keyword">await</span> gondola.enter({<span class="hljs-string">"xpath"</span>:<span class="hljs-string">"//input[@name='textBox_ControlTest']"</span>},<span class="hljs-string">"This is example"</span>);
+</code></pre>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -651,7 +774,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:133</li>
+									<li>Defined in builtin.ts:249</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -660,6 +783,17 @@
 										Will return execution result to a test. In this case you should use async function
 									and await to receive results.</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript">
+<span class="hljs-keyword">await</span> gondola.executeScript(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+
+<span class="hljs-keyword">const</span> element = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'elementId'</span>);
+
+});
+</code></pre>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -684,13 +818,20 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:139</li>
+									<li>Defined in builtin.ts:261</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Retrieves a value from the located element and returns it to test.</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript">
+<span class="hljs-keyword">let</span> value = <span class="hljs-keyword">await</span> gondola.get(<span class="hljs-string">"#buttonId"</span>);
+</code></pre>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -715,13 +856,20 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:146</li>
+									<li>Defined in builtin.ts:274</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Retrieves an attribute from the first located element.</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript">
+<span class="hljs-keyword">let</span> hrefValue = <span class="hljs-keyword">await</span> gondola.getControlProperty(<span class="hljs-string">"//a[.='Home']"</span>, <span class="hljs-string">"href"</span>);
+</code></pre>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -752,13 +900,20 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:94</li>
+									<li>Defined in builtin.ts:168</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Count visible Elements.</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript">
+<span class="hljs-keyword">await</span> gondola.getElementCount(<span class="hljs-string">"#buttonId1"</span>); <span class="hljs-comment">//Get visible elements in control with id "buttonId1"</span>
+</code></pre>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -783,7 +938,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:155</li>
+									<li>Defined in builtin.ts:289</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -791,6 +946,11 @@
 									<p>Retrieves an attribute from the all located elements.</p>
 								</div>
 								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript">
+* <span class="hljs-keyword">let</span> value = <span class="hljs-keyword">await</span> gondola.getControlProperty(<span class="hljs-string">"#buttonId"</span>, <span class="hljs-string">"value"</span>);
+</code></pre>
+									</dd>
 									<dt>experimental</dt>
 									<dd><p>v1</p>
 										<blockquote>
@@ -828,13 +988,31 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:274</li>
+									<li>Defined in builtin.ts:532</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>get JSON value with JSON path</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript">
+<span class="hljs-keyword">const</span> data = [
+ {
+   id: <span class="hljs-number">1</span>,
+   title: <span class="hljs-string">"This is title 1"</span>
+ },
+ {
+   id: <span class="hljs-number">2</span>,
+   title: <span class="hljs-string">"This is title 2"</span>,
+ }
+];
+
+<span class="hljs-keyword">const</span> value = <span class="hljs-keyword">await</span> gondola.getJSONValue(data, <span class="hljs-string">"[0].title"</span>);
+</code></pre>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -843,8 +1021,6 @@
 								</li>
 								<li>
 									<h5>jsonPath: <span class="tsd-signature-type">string</span></h5>
-									<div class="tsd-comment tsd-typography">
-									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
@@ -861,7 +1037,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:168</li>
+									<li>Defined in builtin.ts:314</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -869,6 +1045,13 @@
 									<p>get the text within the popup, as created by window.alert|window.confirm|window.prompt.
 									If no popup is visible then it will return null</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript">
+<span class="hljs-keyword">let</span> text = <span class="hljs-keyword">await</span> gondola.getPopupText();
+</code></pre>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
@@ -884,13 +1067,20 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:162</li>
+									<li>Defined in builtin.ts:302</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Get selected items in list box or combo box that defined by html select tag</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript">
+<span class="hljs-keyword">const</span> item = <span class="hljs-keyword">await</span> gondola.getSelectedItems(<span class="hljs-string">"#selectElementId"</span>);
+</code></pre>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -916,13 +1106,20 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:100</li>
+									<li>Defined in builtin.ts:180</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Retrieves a text from the located element.</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript">
+<span class="hljs-keyword">await</span> gondola.getText({<span class="hljs-string">"xpath"</span>:<span class="hljs-string">"//input[@name='button_ControlTest']"</span>}); <span class="hljs-comment">//Get a text from control with xpath.</span>
+</code></pre>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -947,13 +1144,20 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:181</li>
+									<li>Defined in builtin.ts:339</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Maximize the current window.</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript">
+gondola.maximize();
+</code></pre>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
@@ -969,7 +1173,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:176</li>
+									<li>Defined in builtin.ts:328</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -978,6 +1182,13 @@
 										Requires relative or absolute url.
 									If url starts with /, opens a web page of a site defined in url config parameter.</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript">
+gondola.navigate(<span class="hljs-string">"http://google.com"</span>);
+</code></pre>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -1002,13 +1213,20 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:186</li>
+									<li>Defined in builtin.ts:350</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Open new tab and switch to it.</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript">
+gondola.openNewTab();
+</code></pre>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
@@ -1024,13 +1242,20 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:191</li>
+									<li>Defined in builtin.ts:361</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Reloads the current page.</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript">
+gondola.refresh();
+</code></pre>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
@@ -1046,13 +1271,20 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:198</li>
+									<li>Defined in builtin.ts:374</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Create a report using mochawesome.</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript">
+gondola.report(<span class="hljs-string">"This is report"</span>)
+</code></pre>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -1083,13 +1315,21 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:205</li>
+									<li>Defined in builtin.ts:388</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Saves a screenshot to ouput folder (set in gondola.json)</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript">
+<span class="hljs-keyword">await</span> gondola.saveScreenshot(<span class="hljs-string">"screenshot.png"</span>);
+<span class="hljs-keyword">await</span> gondola.saveScreenshot(<span class="hljs-string">"screenshotFullPage.png"</span>, <span class="hljs-literal">true</span>);
+</code></pre>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -1120,13 +1360,20 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:212</li>
+									<li>Defined in builtin.ts:401</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Select items in list box or combo box that defined by html select tag</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript">
+gondola.select(<span class="hljs-string">"#selectElementId"</span>, [<span class="hljs-string">"Green"</span>, <span class="hljs-string">"Red"</span>]);
+</code></pre>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -1157,13 +1404,24 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:218</li>
+									<li>Defined in builtin.ts:417</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Callback the [callback] when error happens</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript">
+gondola.setErrorHandler(<span class="hljs-keyword">async</span> () =&gt; {
+
+gondola.report(<span class="hljs-string">"This is error handler"</span>);
+
+});
+</code></pre>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -1188,13 +1446,20 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:224</li>
+									<li>Defined in builtin.ts:429</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>set text into prompt popup.</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript">
+gondola.setPopupText(<span class="hljs-string">"I am testing popup"</span>);
+</code></pre>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -1219,13 +1484,20 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:234</li>
+									<li>Defined in builtin.ts:445</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Set state for the located checkbox/radio.</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript">
+gondola.setState(<span class="hljs-string">"#checkboxId"</span>, <span class="hljs-literal">true</span>);<span class="hljs-comment">//set State = true for the element "checkboxId"</span>
+</code></pre>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -1261,13 +1533,20 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:247</li>
+									<li>Defined in builtin.ts:470</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>switch focus to a particular tab by its number. It waits tabs loading and then switch tab</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript">
+gondola.switchBrowserTab(<span class="hljs-string">"next"</span>);
+</code></pre>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -1298,13 +1577,20 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:240</li>
+									<li>Defined in builtin.ts:457</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Switches frame or in case of null locator reverts to parent.</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript">
+gondola.switchFrame(<span class="hljs-string">"//iframe[@src='https://paciellogroup.com']"</span>);
+</code></pre>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -1329,13 +1615,20 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:253</li>
+									<li>Defined in builtin.ts:482</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Pauses execution for a number of seconds.</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript">
+gondola.wait(<span class="hljs-number">5</span>);
+</code></pre>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -1360,13 +1653,20 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:267</li>
+									<li>Defined in builtin.ts:508</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Waits for an element to become not attached to the DOM on a page (by default waits for 1sec).</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript">
+gondola.waitForDisappear(<span class="hljs-string">"#buttonTest"</span>,<span class="hljs-number">5</span>);
+</code></pre>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
@@ -1397,13 +1697,20 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:260</li>
+									<li>Defined in builtin.ts:495</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Waits for element to be present on page (by default waits for 1sec).</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript">
+gondola.waitForElement(<span class="hljs-string">"#buttonTest"</span>,<span class="hljs-number">5</span>); <span class="hljs-comment">//Wait for element with id "#buttonTest" to be present on page in 5 seconds</span>
+</code></pre>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
