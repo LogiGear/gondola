@@ -91,9 +91,9 @@
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondola.html#checkcontrolexist" class="tsd-kind-icon">check<wbr>Control<wbr>Exist</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondola.html#checkcontrolnotexist" class="tsd-kind-icon">check<wbr>Control<wbr>Not<wbr>Exist</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondola.html#checkcontrolproperty" class="tsd-kind-icon">check<wbr>Control<wbr>Property</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondola.html#checkequal" class="tsd-kind-icon">check<wbr>Equal</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-has-type-parameter"><a href="igondola.html#checkequal" class="tsd-kind-icon">check<wbr>Equal</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondola.html#checkjsonvalue" class="tsd-kind-icon">checkJSONValue</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondola.html#checknotequal" class="tsd-kind-icon">check<wbr>Not<wbr>Equal</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-has-type-parameter"><a href="igondola.html#checknotequal" class="tsd-kind-icon">check<wbr>Not<wbr>Equal</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondola.html#checktext" class="tsd-kind-icon">check<wbr>Text</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondola.html#checkwindowexist" class="tsd-kind-icon">check<wbr>Window<wbr>Exist</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondola.html#click" class="tsd-kind-icon">click</a></li>
@@ -264,11 +264,11 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-has-type-parameter">
 					<a name="checkequal" class="tsd-anchor"></a>
 					<h3>check<wbr>Equal</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">check<wbr>Equal<span class="tsd-signature-symbol">(</span>actual<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, expected<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, message<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">check<wbr>Equal&lt;T&gt;<span class="tsd-signature-symbol">(</span>actual<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, expected<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, message<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -290,16 +290,22 @@ gondola.checkEqual(value, <span class="hljs-string">"Hi"</span>, <span class="hl
 									</dd>
 								</dl>
 							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>actual: <span class="tsd-signature-type">any</span></h5>
+									<h5>actual: <span class="tsd-signature-type">T</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>actual value</p>
 									</div>
 								</li>
 								<li>
-									<h5>expected: <span class="tsd-signature-type">any</span></h5>
+									<h5>expected: <span class="tsd-signature-type">T</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>expected value</p>
 									</div>
@@ -367,11 +373,11 @@ gondola.checkEqual(value, <span class="hljs-string">"Hi"</span>, <span class="hl
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-has-type-parameter">
 					<a name="checknotequal" class="tsd-anchor"></a>
 					<h3>check<wbr>Not<wbr>Equal</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">check<wbr>Not<wbr>Equal<span class="tsd-signature-symbol">(</span>actual<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, expected<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, message<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">check<wbr>Not<wbr>Equal&lt;T&gt;<span class="tsd-signature-symbol">(</span>actual<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, expected<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, message<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -393,16 +399,22 @@ gondola.checkEqual(value, <span class="hljs-string">"Hi"</span>, <span class="hl
 									</dd>
 								</dl>
 							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>actual: <span class="tsd-signature-type">any</span></h5>
+									<h5>actual: <span class="tsd-signature-type">T</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>actual value</p>
 									</div>
 								</li>
 								<li>
-									<h5>expected: <span class="tsd-signature-type">any</span></h5>
+									<h5>expected: <span class="tsd-signature-type">T</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>expected value</p>
 									</div>
@@ -1757,13 +1769,13 @@ gondola.waitForElement(<span class="hljs-string">"#buttonTest"</span>,<span clas
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="igondola.html#checkcontrolproperty" class="tsd-kind-icon">check<wbr>Control<wbr>Property</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-interface">
+							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-has-type-parameter">
 								<a href="igondola.html#checkequal" class="tsd-kind-icon">check<wbr>Equal</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="igondola.html#checkjsonvalue" class="tsd-kind-icon">checkJSONValue</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-interface">
+							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-has-type-parameter">
 								<a href="igondola.html#checknotequal" class="tsd-kind-icon">check<wbr>Not<wbr>Equal</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
