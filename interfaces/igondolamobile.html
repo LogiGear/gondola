@@ -69,7 +69,7 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>set of Appium extended actions which is supported by Gondola</p>
+						<p>set of Appium extended actions supported by Gondola</p>
 					</div>
 				</div>
 			</section>
@@ -116,12 +116,13 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:635</li>
+									<li>Defined in builtin.ts:644</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Checks that expected App is installed already</p>
+									<p>Checks if the specified app is installed
+									If the specified app is installed, the verify point is considered: Passed; otherwise the test result is: Failed.</p>
 								</div>
 								<dl class="tsd-comment-tags">
 									<dt>example</dt>
@@ -153,7 +154,7 @@ gondola.checkAppIsInstalled(<span class="hljs-string">"com.example.appName);</sp
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:668</li>
+									<li>Defined in builtin.ts:677</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -186,12 +187,12 @@ gondola.checkAppIsInstalled(<span class="hljs-string">"com.example.appName);</sp
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:697</li>
+									<li>Defined in builtin.ts:706</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Retrieve element&#39;s boundary</p>
+									<p>Retrieve an element&#39;s boundary</p>
 								</div>
 								<dl class="tsd-comment-tags">
 									<dt>example</dt>
@@ -225,15 +226,15 @@ gondola.checkAppIsInstalled(<span class="hljs-string">"com.example.appName);</sp
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:657</li>
+									<li>Defined in builtin.ts:666</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Gets followed actions run parallel</p>
+									<p>Run all subsequent actions in parallel</p>
 								</div>
-								<p><strong>LIMITATION:</strong> Currently, user must await all actions be done
-								before switching device.</p>
+								<p><strong>LIMITATION:</strong> Currently, the user must wait for all currently running actions be completed
+								before switching devices.</p>
 								<dl class="tsd-comment-tags">
 									<dt>experimental</dt>
 									<dd><p>v1</p>
@@ -251,18 +252,18 @@ gondola.checkAppIsInstalled(<span class="hljs-string">"com.example.appName);</sp
 					<a name="runonandroid" class="tsd-anchor"></a>
 					<h3>run<wbr>OnAndroid</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">run<wbr>OnAndroid<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span>, fn<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">run<wbr>OnAndroid<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span>, Function<span class="tsd-signature-symbol">?: </span><a href="" class="tsd-signature-type">Function</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:596</li>
+									<li>Defined in builtin.ts:604</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Runs the given function while testing Android</p>
+									<p>Runs the given function when testing on Android</p>
 								</div>
 								<p>Note: in case use options capabilities, remember that action only work if
 								this option is declared in the gondola config file.</p>
@@ -295,10 +296,7 @@ gondola.runOnAndroid(<span class="hljs-function">(<span class="hljs-params">cap<
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> fn: <span class="tsd-signature-type">Function</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>callback function will be executed</p>
-									</div>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> Function: <a href="" class="tsd-signature-type">Function</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -309,21 +307,21 @@ gondola.runOnAndroid(<span class="hljs-function">(<span class="hljs-params">cap<
 					<a name="runonios" class="tsd-anchor"></a>
 					<h3>run<wbr>OnIOS</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">run<wbr>OnIOS<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span>, fn<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">run<wbr>OnIOS<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span>, Function<span class="tsd-signature-symbol">?: </span><a href="" class="tsd-signature-type">Function</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:624</li>
+									<li>Defined in builtin.ts:632</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Runs the given function while testing iOS</p>
+									<p>Runs the given function when testing on iOS</p>
 								</div>
-								<p>Note: in case use options capabilities, remember that action only work if
-								this option is declared in the gondola config file.</p>
+								<p>Note: if you&#39;re using Appium&#39;s Desired Capabilities, you must have the
+								options set in <code>`gondola.json</code> under the helpers-&gt;Appium-&gt;desiredCapabilities section.</p>
 								<dl class="tsd-comment-tags">
 									<dt>example</dt>
 									<dd><pre><code class="language-typescript">
@@ -353,7 +351,7 @@ gondola.runOnIOS(<span class="hljs-function">(<span class="hljs-params">cap</spa
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> fn: <span class="tsd-signature-type">Function</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> Function: <a href="" class="tsd-signature-type">Function</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>callback function will be executed</p>
 									</div>
@@ -373,7 +371,7 @@ gondola.runOnIOS(<span class="hljs-function">(<span class="hljs-params">cap</spa
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:684</li>
+									<li>Defined in builtin.ts:693</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -400,7 +398,7 @@ gondola.sendDeviceKeyEvent(<span class="hljs-number">3</span>);</code></pre>
 									<div class="tsd-comment tsd-typography">
 										<p>Device specific key value</p>
 										<p>List of keys: <a href="https://developer.android.com/reference/android/view/KeyEvent.html">https://developer.android.com/reference/android/view/KeyEvent.html</a>
-										LIMITATION: support only Android</p>
+										LIMITATION: only supports Android</p>
 									</div>
 								</li>
 							</ul>
@@ -418,7 +416,7 @@ gondola.sendDeviceKeyEvent(<span class="hljs-number">3</span>);</code></pre>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:710</li>
+									<li>Defined in builtin.ts:719</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -461,7 +459,7 @@ gondola.sendDeviceKeyEvent(<span class="hljs-number">3</span>);</code></pre>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:724</li>
+									<li>Defined in builtin.ts:733</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -504,16 +502,16 @@ gondola.sendDeviceKeyEvent(<span class="hljs-number">3</span>);</code></pre>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:647</li>
+									<li>Defined in builtin.ts:656</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Changes the run context to given deviceName
-									To get actions run parallel on all devices again, use <a href="igondolamobile.html#runonalldevices">runOnAllDevices</a>.</p>
+									<p>Run subsequent actions on a specific device
+									To run actions in parallel on all devices, use <a href="igondolamobile.html#runonalldevices">runOnAllDevices</a>.</p>
 								</div>
-								<p><strong>LIMITATION:</strong> Currently, user must await all actions on specific device be done
-								before switching to other.</p>
+								<p><strong>LIMITATION:</strong> Currently, the user must wait for all currently running actions be completed
+								before switching devices.</p>
 								<dl class="tsd-comment-tags">
 									<dt>experimental</dt>
 									<dd><p>v1</p>
@@ -546,7 +544,7 @@ gondola.sendDeviceKeyEvent(<span class="hljs-number">3</span>);</code></pre>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:568</li>
+									<li>Defined in builtin.ts:576</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
