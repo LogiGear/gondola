@@ -89,6 +89,7 @@
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolamobile.html#checkappisinstalled" class="tsd-kind-icon">check<wbr>App<wbr>IsInstalled</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolamobile.html#getcapabilities" class="tsd-kind-icon">get<wbr>Capabilities</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolamobile.html#getcurrentbrowser" class="tsd-kind-icon">get<wbr>Current<wbr>Browser</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolamobile.html#getelementbounds" class="tsd-kind-icon">get<wbr>Element<wbr>Bounds</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolamobile.html#runonalldevices" class="tsd-kind-icon">run<wbr>OnAll<wbr>Devices</a></li>
@@ -145,6 +146,42 @@ gondola.checkAppIsInstalled(<span class="hljs-string">"com.example.appName);</sp
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="getcapabilities" class="tsd-anchor"></a>
+					<h3>get<wbr>Capabilities</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Capabilities<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in builtin.ts:692</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Gets the current capabilities</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript">
+<span class="hljs-keyword">const</span> capabilities = <span class="hljs-keyword">await</span> gondola.getCapabilities();
+<span class="hljs-keyword">if</span> (capabilities.platformName === <span class="hljs-string">"android"</span>){
+     <span class="hljs-comment">// Do something</span>
+}
+*</code></pre>
+										<p>@experimental v1</p>
+										<blockquote>
+											<p>Can be changed or removed soon</p>
+										</blockquote>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
 					<a name="getcurrentbrowser" class="tsd-anchor"></a>
 					<h3>get<wbr>Current<wbr>Browser</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
@@ -187,7 +224,7 @@ gondola.checkAppIsInstalled(<span class="hljs-string">"com.example.appName);</sp
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:706</li>
+									<li>Defined in builtin.ts:721</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -371,7 +408,7 @@ gondola.runOnIOS(<span class="hljs-function">(<span class="hljs-params">cap</spa
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:693</li>
+									<li>Defined in builtin.ts:708</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -416,7 +453,7 @@ gondola.sendDeviceKeyEvent(<span class="hljs-number">3</span>);</code></pre>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:719</li>
+									<li>Defined in builtin.ts:734</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -459,7 +496,7 @@ gondola.sendDeviceKeyEvent(<span class="hljs-number">3</span>);</code></pre>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:733</li>
+									<li>Defined in builtin.ts:748</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -601,6 +638,9 @@ gondola.tap({
 						<ul>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="igondolamobile.html#checkappisinstalled" class="tsd-kind-icon">check<wbr>App<wbr>IsInstalled</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="igondolamobile.html#getcapabilities" class="tsd-kind-icon">get<wbr>Capabilities</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="igondolamobile.html#getcurrentbrowser" class="tsd-kind-icon">get<wbr>Current<wbr>Browser</a>
