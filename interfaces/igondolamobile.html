@@ -89,6 +89,7 @@
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolamobile.html#checkappisinstalled" class="tsd-kind-icon">check<wbr>App<wbr>IsInstalled</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolamobile.html#executecommand" class="tsd-kind-icon">execute<wbr>Command</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolamobile.html#getallcontexts" class="tsd-kind-icon">get<wbr>All<wbr>Contexts</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolamobile.html#getcapabilities" class="tsd-kind-icon">get<wbr>Capabilities</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolamobile.html#getcontext" class="tsd-kind-icon">get<wbr>Context</a></li>
@@ -148,6 +149,69 @@ gondola.checkAppIsInstalled(<span class="hljs-string">"com.example.appName);</sp
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="executecommand" class="tsd-anchor"></a>
+					<h3>execute<wbr>Command</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">execute<wbr>Command<span class="tsd-signature-symbol">(</span>command<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, args<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in builtin.ts:831</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Execute a native mobile command. Ref: <a href="http://appium.io/docs/en/commands/mobile-command/">http://appium.io/docs/en/commands/mobile-command/</a></p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript"><span class="hljs-comment">// get current app activity name</span>
+<span class="hljs-comment">// full command: adb shell "dumpsys window windows | grep -E 'mCurrentFocus|mFocusedApp'"</span>
+<span class="hljs-keyword">await</span> gondola.runOnAndroid(<span class="hljs-keyword">async</span> () =&gt; {
+    <span class="hljs-keyword">const</span> currentAppInfo = <span class="hljs-keyword">await</span> gondola.executeCommand(<span class="hljs-string">"mobile:shell"</span>, [{
+        command: <span class="hljs-string">"dumpsys"</span>,
+        args: [
+            <span class="hljs-string">"window"</span>,
+            <span class="hljs-string">"windows"</span>,
+            <span class="hljs-string">"|"</span>,
+            <span class="hljs-string">"grep"</span>,
+            <span class="hljs-string">"-E"</span>,
+            <span class="hljs-string">"'mCurrentFocus|mFocusedApp'"</span>,
+        ],
+    }]);
+    <span class="hljs-built_in">console</span>.log(currentAppInfo);
+});
+
+<span class="hljs-comment">// get battery info on iOS</span>
+<span class="hljs-keyword">await</span> gondola.runOnIOS(<span class="hljs-keyword">async</span> () =&gt; {
+    <span class="hljs-keyword">const</span> batteryInfo = <span class="hljs-keyword">await</span> gondola.executeCommand(<span class="hljs-string">"mobile:batteryInfo"</span>, []);
+    <span class="hljs-built_in">console</span>.log(batteryInfo);
+});</code></pre>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>command: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>command name</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> args: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>JSON serializable argument</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -794,6 +858,9 @@ gondola.tap({
 						<ul>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="igondolamobile.html#checkappisinstalled" class="tsd-kind-icon">check<wbr>App<wbr>IsInstalled</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="igondolamobile.html#executecommand" class="tsd-kind-icon">execute<wbr>Command</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="igondolamobile.html#getallcontexts" class="tsd-kind-icon">get<wbr>All<wbr>Contexts</a>
