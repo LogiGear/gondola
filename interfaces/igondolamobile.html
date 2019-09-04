@@ -91,6 +91,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolamobile.html#checkappisinstalled" class="tsd-kind-icon">check<wbr>App<wbr>IsInstalled</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolamobile.html#getcapabilities" class="tsd-kind-icon">get<wbr>Capabilities</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolamobile.html#getcurrentbrowser" class="tsd-kind-icon">get<wbr>Current<wbr>Browser</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolamobile.html#getdevicescreensize" class="tsd-kind-icon">get<wbr>Device<wbr>Screen<wbr>Size</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolamobile.html#getelementbounds" class="tsd-kind-icon">get<wbr>Element<wbr>Bounds</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolamobile.html#hidedevicekeyboard" class="tsd-kind-icon">hide<wbr>Device<wbr>Keyboard</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolamobile.html#runonalldevices" class="tsd-kind-icon">run<wbr>OnAll<wbr>Devices</a></li>
@@ -171,9 +172,9 @@ gondola.checkAppIsInstalled(<span class="hljs-string">"com.example.appName);</sp
 <span class="hljs-keyword">if</span> (capabilities.platformName === <span class="hljs-string">"android"</span>){
      <span class="hljs-comment">// Do something</span>
 }
-*</code></pre>
-										<p>@experimental v1
-										&#62; Can be changed or removed soon</p>
+* <span class="hljs-string">``</span><span class="hljs-string">`
+@experimental v1
+&amp;#62; Can be changed or removed soon</span></code></pre>
 									</dd>
 								</dl>
 							</div>
@@ -185,7 +186,7 @@ gondola.checkAppIsInstalled(<span class="hljs-string">"com.example.appName);</sp
 					<a name="getcurrentbrowser" class="tsd-anchor"></a>
 					<h3>get<wbr>Current<wbr>Browser</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Current<wbr>Browser<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Client</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">Browser</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Current<wbr>Browser<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Client</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">Browser</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -203,14 +204,39 @@ gondola.checkAppIsInstalled(<span class="hljs-string">"com.example.appName);</sp
 									<dd><pre><code class="language-typescript">
 <span class="hljs-keyword">const</span> browser = <span class="hljs-keyword">await</span> gondola.getCurrentBrowser();
 <span class="hljs-keyword">const</span> element = <span class="hljs-keyword">await</span> browser.findElement(<span class="hljs-string">"accessibility id"</span>, <span class="hljs-string">"exampleId"</span>);
-*</code></pre>
+* <span class="hljs-string">``</span><span class="hljs-string">`</span></code></pre>
 									</dd>
 								</dl>
 							</div>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Client</span>
-								<span class="tsd-signature-symbol"> &amp; </span>
-								<span class="tsd-signature-type">Browser</span>
-							</h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Client</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">Browser</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="getdevicescreensize" class="tsd-anchor"></a>
+					<h3>get<wbr>Device<wbr>Screen<wbr>Size</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Device<wbr>Screen<wbr>Size<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">RectReturn</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in builtin.ts:769</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get device screen size</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript">
+<span class="hljs-keyword">let</span> screenSize = <span class="hljs-keyword">await</span> gondola.getDeviceScreenSize();</code></pre>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">RectReturn</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -399,7 +425,7 @@ gondola.runOnAndroid(<span class="hljs-function">(<span class="hljs-params">cap<
 									<p>Runs the given function when testing on iOS.<br /></p>
 								</div>
 								<p>Note: if you&#39;re using Appium&#39;s Desired Capabilities, you must have the
-								options set in <code>`gondola.json</code> under the helpers-&gt;Appium-&gt;desiredCapabilities section.</p>
+								options set in ```gondola.json`` under the helpers-&gt;Appium-&gt;desiredCapabilities section.</p>
 								<dl class="tsd-comment-tags">
 									<dt>example</dt>
 									<dd><pre><code class="language-typescript">
@@ -683,6 +709,9 @@ gondola.tap({
 								<a href="igondolamobile.html#getcurrentbrowser" class="tsd-kind-icon">get<wbr>Current<wbr>Browser</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="igondolamobile.html#getdevicescreensize" class="tsd-kind-icon">get<wbr>Device<wbr>Screen<wbr>Size</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="igondolamobile.html#getelementbounds" class="tsd-kind-icon">get<wbr>Element<wbr>Bounds</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
@@ -742,6 +771,7 @@ gondola.tap({
 				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
 				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
 				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
