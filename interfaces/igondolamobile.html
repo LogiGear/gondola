@@ -89,7 +89,9 @@
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolamobile.html#checkappisinstalled" class="tsd-kind-icon">check<wbr>App<wbr>IsInstalled</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolamobile.html#getallcontexts" class="tsd-kind-icon">get<wbr>All<wbr>Contexts</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolamobile.html#getcapabilities" class="tsd-kind-icon">get<wbr>Capabilities</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolamobile.html#getcontext" class="tsd-kind-icon">get<wbr>Context</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolamobile.html#getcurrentbrowser" class="tsd-kind-icon">get<wbr>Current<wbr>Browser</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolamobile.html#getdevicescreensize" class="tsd-kind-icon">get<wbr>Device<wbr>Screen<wbr>Size</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolamobile.html#getelementbounds" class="tsd-kind-icon">get<wbr>Element<wbr>Bounds</a></li>
@@ -101,6 +103,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolamobile.html#swipe" class="tsd-kind-icon">swipe</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolamobile.html#swipebycoordinates" class="tsd-kind-icon">swipe<wbr>ByCoordinates</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolamobile.html#switchdevice" class="tsd-kind-icon">switch<wbr>Device</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolamobile.html#switchtocontext" class="tsd-kind-icon">switch<wbr>ToContext</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolamobile.html#tap" class="tsd-kind-icon">tap</a></li>
 							</ul>
 						</section>
@@ -149,6 +152,34 @@ gondola.checkAppIsInstalled(<span class="hljs-string">"com.example.appName);</sp
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="getallcontexts" class="tsd-anchor"></a>
+					<h3>get<wbr>All<wbr>Contexts</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>All<wbr>Contexts<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in builtin.ts:779</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Get list of all available contexts</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript">
+<span class="hljs-keyword">let</span> allContext: <span class="hljs-built_in">string</span>[] = <span class="hljs-keyword">await</span> gondola.getAllContexts();</code></pre>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
 					<a name="getcapabilities" class="tsd-anchor"></a>
 					<h3>get<wbr>Capabilities</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
@@ -179,6 +210,34 @@ gondola.checkAppIsInstalled(<span class="hljs-string">"com.example.appName);</sp
 								</dl>
 							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="getcontext" class="tsd-anchor"></a>
+					<h3>get<wbr>Context</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Context<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in builtin.ts:789</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Retrieve current context</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript">
+<span class="hljs-keyword">let</span> currentContext: <span class="hljs-built_in">string</span> = <span class="hljs-keyword">await</span> gondola.getContext();</code></pre>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -635,6 +694,40 @@ gondola.sendDeviceKeyEvent(<span class="hljs-number">3</span>);</code></pre>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="switchtocontext" class="tsd-anchor"></a>
+					<h3>switch<wbr>ToContext</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">switch<wbr>ToContext<span class="tsd-signature-symbol">(</span>context<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in builtin.ts:799</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Switch to the specified context.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript">
+<span class="hljs-keyword">await</span> gondola.switchToContext(<span class="hljs-string">"NATIVE_APP"</span>);</code></pre>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>context: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
 					<a name="tap" class="tsd-anchor"></a>
 					<h3>tap</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
@@ -703,7 +796,13 @@ gondola.tap({
 								<a href="igondolamobile.html#checkappisinstalled" class="tsd-kind-icon">check<wbr>App<wbr>IsInstalled</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="igondolamobile.html#getallcontexts" class="tsd-kind-icon">get<wbr>All<wbr>Contexts</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="igondolamobile.html#getcapabilities" class="tsd-kind-icon">get<wbr>Capabilities</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="igondolamobile.html#getcontext" class="tsd-kind-icon">get<wbr>Context</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="igondolamobile.html#getcurrentbrowser" class="tsd-kind-icon">get<wbr>Current<wbr>Browser</a>
@@ -737,6 +836,9 @@ gondola.tap({
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="igondolamobile.html#switchdevice" class="tsd-kind-icon">switch<wbr>Device</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="igondolamobile.html#switchtocontext" class="tsd-kind-icon">switch<wbr>ToContext</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="igondolamobile.html#tap" class="tsd-kind-icon">tap</a>
