@@ -100,6 +100,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolamobile.html#runonalldevices" class="tsd-kind-icon">run<wbr>OnAll<wbr>Devices</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolamobile.html#runonandroid" class="tsd-kind-icon">run<wbr>OnAndroid</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolamobile.html#runonios" class="tsd-kind-icon">run<wbr>OnIOS</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolamobile.html#scrollintoview" class="tsd-kind-icon">scroll<wbr>Into<wbr>View</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolamobile.html#senddevicekeyevent" class="tsd-kind-icon">send<wbr>Device<wbr>Key<wbr>Event</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolamobile.html#swipe" class="tsd-kind-icon">swipe</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolamobile.html#swipebycoordinates" class="tsd-kind-icon">swipe<wbr>ByCoordinates</a></li>
@@ -591,6 +592,44 @@ gondola.runOnIOS(<span class="hljs-function">(<span class="hljs-params">cap</spa
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="scrollintoview" class="tsd-anchor"></a>
+					<h3>scroll<wbr>Into<wbr>View</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">scroll<wbr>Into<wbr>View<span class="tsd-signature-symbol">(</span>element<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in builtin.ts:845</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Scroll element into view.<br>
+									<strong>&#62; Support context &quot;WEBVIEW&quot; only</strong></p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript">
+<span class="hljs-keyword">await</span> gondola.scrollIntoView({xpath: <span class="hljs-string">"//a"</span>}});</code></pre>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>element: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>located by label|name|CSS|XPath|strict locator.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
 					<a name="senddevicekeyevent" class="tsd-anchor"></a>
 					<h3>send<wbr>Device<wbr>Key<wbr>Event</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
@@ -893,6 +932,9 @@ gondola.tap({
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="igondolamobile.html#runonios" class="tsd-kind-icon">run<wbr>OnIOS</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="igondolamobile.html#scrollintoview" class="tsd-kind-icon">scroll<wbr>Into<wbr>View</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="igondolamobile.html#senddevicekeyevent" class="tsd-kind-icon">send<wbr>Device<wbr>Key<wbr>Event</a>
