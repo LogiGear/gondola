@@ -69,7 +69,7 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>set of actions supported by gondola</p>
+						<p>Set of actions supported by gondola</p>
 					</div>
 				</div>
 			</section>
@@ -149,19 +149,19 @@
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Check if a control exist.
+									<p>Check if a control exists.
 									If the control is found, the verify point is considered: Passed; otherwise the test is: Failed.</p>
 								</div>
 								<dl class="tsd-comment-tags">
 									<dt>example</dt>
 									<dd><pre><code class="language-typescript">
- <span class="hljs-comment">// check if a control with id "elementId" exist .</span>
+ <span class="hljs-comment">// check if a control with id "elementId" exists .</span>
 <span class="hljs-keyword">await</span> gondola.checkControlExist(<span class="hljs-string">"#elementId"</span>);
 
- <span class="hljs-comment">// check if a control containing "Login" exist.</span>
+ <span class="hljs-comment">// check if a control containing "Login" exists.</span>
 <span class="hljs-keyword">await</span> gondola.checkControlExist(<span class="hljs-string">"Login"</span>);
 
- <span class="hljs-comment">// check if control that has the attribute "name=submit" exist.</span>
+ <span class="hljs-comment">// check if control that has the attribute "name=submit" exists.</span>
 <span class="hljs-keyword">await</span> gondola.checkControlExist({name: <span class="hljs-string">"submit"</span>});</code></pre>
 									</dd>
 								</dl>
@@ -194,20 +194,20 @@
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Check if a control does not exist.
+									<p>Check if a control does not exists.
 										If the specified control is not found,
 									the verify point is considered: Passed; otherwise the test result is: Failed.</p>
 								</div>
 								<dl class="tsd-comment-tags">
 									<dt>example</dt>
 									<dd><pre><code class="language-typescript">
-<span class="hljs-comment">// check if a control with the id "elementId" does not exist .</span>
+<span class="hljs-comment">// check if a control with the id "elementId" does not exists .</span>
 <span class="hljs-keyword">await</span> gondola.checkControlNotExist(<span class="hljs-string">"#elementId"</span>);
 
-<span class="hljs-comment">// check if a control containing "Login" does not exist.</span>
+<span class="hljs-comment">// check if a control containing "Login" does not exists.</span>
 <span class="hljs-keyword">await</span> gondola.checkControlNotExist(<span class="hljs-string">"Login"</span>);
 
-<span class="hljs-comment">// check if a control that has attribute "name=submit"  does not exist.</span>
+<span class="hljs-comment">// check if a control that has attribute "name=submit"  does not exists.</span>
 <span class="hljs-keyword">await</span> gondola.checkControlNotExist({name : <span class="hljs-string">"submit"</span>});</code></pre>
 									</dd>
 								</dl>
@@ -240,7 +240,7 @@
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Check if the first element with given locator has a attribute whose value matches the provided one.
+									<p>Check if the first element with given locator has an attribute whose value matches the provided one.
 									The verify point is considered: Passed if the values match; otherwise the test result is: Failed.</p>
 								</div>
 								<dl class="tsd-comment-tags">
@@ -349,7 +349,7 @@ gondola.checkEqual(value, <span class="hljs-string">"Hi"</span>, <span class="hl
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Check JSON value using its JSON path.
+									<p>Check a JSON value using its JSON path.
 										If they satisfy deep, strict equality,
 									the verify point is considered: Passed; otherwise the test result is: Failed.</p>
 								</div>
@@ -502,13 +502,13 @@ gondola.checkNotEqual(value, <span class="hljs-string">"Hi"</span>, <span class=
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Checks that the title of a window/page is equal to provided one.
+									<p>Checks that the title of a window/page is equal to the provided one.
 									The verify point is considered: Passed if the values match; otherwise the test result is: Failed.</p>
 								</div>
 								<dl class="tsd-comment-tags">
 									<dt>example</dt>
 									<dd><pre><code class="language-typescript">
-<span class="hljs-comment">// Check for the existence of a window that title is "Scrum Board"</span>
+<span class="hljs-comment">// Check for the existence of a window whose title is "Scrum Board"</span>
 <span class="hljs-keyword">await</span> gondola.checkWindowExist(<span class="hljs-string">"Scrum Board"</span>);</code></pre>
 									</dd>
 								</dl>
@@ -683,7 +683,7 @@ gondola.closeOtherTabs();</code></pre>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Clears all cookies. If cookie is specified only deletes that cookie.</p>
+									<p>Clears all cookies. If a specific cookie is specified, it only deletes that cookie.</p>
 								</div>
 								<dl class="tsd-comment-tags">
 									<dt>example</dt>
@@ -721,13 +721,13 @@ gondola.deleteCookie(<span class="hljs-string">"test"</span>);</code></pre>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Return a Boolean value to indicate whether the specified control is found.
-									Returns a Boolean value of <code>true</code> if control is found. Otherwise it returns <code>false</code>.</p>
+									<p>Returns a Boolean value to indicate whether or not the specified control is found.
+									Returns a Boolean value of <code>true</code> if the control is found. Otherwise it returns <code>false</code>.</p>
 								</div>
 								<dl class="tsd-comment-tags">
 									<dt>example</dt>
 									<dd><pre><code class="language-typescript">
-<span class="hljs-comment">// Return value whether the control with id "button_ControlTest" exist.</span>
+<span class="hljs-comment">// Returns `true` if the control with id "button_ControlTest" exists.</span>
 <span class="hljs-keyword">let</span> variable = <span class="hljs-keyword">await</span> gondola.doesControlExist(<span class="hljs-string">"#button_ControlTest"</span>);</code></pre>
 									</dd>
 								</dl>
@@ -1279,7 +1279,7 @@ gondola.refresh();</code></pre>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Create a report using mochawesome.</p>
+									<p>Create a report using using the the reporter set in gondola.json.</p>
 								</div>
 								<dl class="tsd-comment-tags">
 									<dt>example</dt>
@@ -1598,7 +1598,7 @@ gondola.switchBrowserTab(<span class="hljs-string">"next"</span>);</code></pre>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Switches frame. In the case of null a locator it reverts to the parent.</p>
+									<p>Switches frames. In the case of null a locator it reverts to the parent.</p>
 								</div>
 								<dl class="tsd-comment-tags">
 									<dt>example</dt>
@@ -1672,7 +1672,7 @@ gondola.wait(<span class="hljs-number">5</span>);</code></pre>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Waits for an element to be removed from the DOM tree of a page (the default ammount is  1 second).</p>
+									<p>Waits for an element to be removed from the DOM tree of a page (the default amount is  1 second).</p>
 								</div>
 								<dl class="tsd-comment-tags">
 									<dt>example</dt>
@@ -1715,7 +1715,7 @@ gondola.waitForDisappear(<span class="hljs-string">"#buttonTest"</span>, <span c
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Waits for element to be present on the page (the default amount is 1 second).</p>
+									<p>Waits for an element to be present on the page (the default amount is 1 second).</p>
 								</div>
 								<dl class="tsd-comment-tags">
 									<dt>example</dt>
