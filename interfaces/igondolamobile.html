@@ -101,6 +101,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolamobile.html#runonandroid" class="tsd-kind-icon">run<wbr>OnAndroid</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolamobile.html#runonios" class="tsd-kind-icon">run<wbr>OnIOS</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolamobile.html#scrollintoview" class="tsd-kind-icon">scroll<wbr>Into<wbr>View</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolamobile.html#selectpickeritem" class="tsd-kind-icon">select<wbr>Picker<wbr>Item</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolamobile.html#senddevicekeyevent" class="tsd-kind-icon">send<wbr>Device<wbr>Key<wbr>Event</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolamobile.html#swipe" class="tsd-kind-icon">swipe</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolamobile.html#swipebycoordinates" class="tsd-kind-icon">swipe<wbr>ByCoordinates</a></li>
@@ -630,6 +631,56 @@ gondola.runOnIOS(<span class="hljs-function">(<span class="hljs-params">cap</spa
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="selectpickeritem" class="tsd-anchor"></a>
+					<h3>select<wbr>Picker<wbr>Item</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">select<wbr>Picker<wbr>Item<span class="tsd-signature-symbol">(</span>element<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span>, finishElement<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in builtin.ts:867</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Select scroll picker Item</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript"><span class="hljs-comment">// single item: pickerElement will be: day/ month/ year which are children controls of picker</span>
+<span class="hljs-keyword">await</span> gondola.selectPicker(pickerElement, <span class="hljs-string">"item name"</span>);
+
+<span class="hljs-comment">// multiple items: pickerElement will be picker control, not include any child</span>
+<span class="hljs-keyword">await</span> gondola.selectPicker(pickerElement, [<span class="hljs-string">"one"</span>, <span class="hljs-string">"two"</span>, <span class="hljs-string">"three"</span>]);
+
+<span class="hljs-comment">// multiple items which contain undefined item: that means this item will not change</span>
+<span class="hljs-comment">// and pickerElement will be picker control, not include any child</span>
+<span class="hljs-keyword">await</span> gondola.selectPicker(pickerElement, [<span class="hljs-string">"one"</span>, <span class="hljs-literal">undefined</span>, <span class="hljs-string">"three"</span>]);
+</code></pre>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>element: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a></h5>
+								</li>
+								<li>
+									<h5>value: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> finishElement: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a></h5>
+									<div class="tsd-comment tsd-typography">
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
 					<a name="senddevicekeyevent" class="tsd-anchor"></a>
 					<h3>send<wbr>Device<wbr>Key<wbr>Event</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
@@ -935,6 +986,9 @@ gondola.tap({
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="igondolamobile.html#scrollintoview" class="tsd-kind-icon">scroll<wbr>Into<wbr>View</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="igondolamobile.html#selectpickeritem" class="tsd-kind-icon">select<wbr>Picker<wbr>Item</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="igondolamobile.html#senddevicekeyevent" class="tsd-kind-icon">send<wbr>Device<wbr>Key<wbr>Event</a>
