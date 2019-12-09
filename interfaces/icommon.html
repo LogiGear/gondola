@@ -96,7 +96,6 @@
 								<li class="tsd-kind-method tsd-parent-kind-interface tsd-has-type-parameter"><a href="icommon.html#checknotequal" class="tsd-kind-icon">check<wbr>Not<wbr>Equal</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="icommon.html#checktext" class="tsd-kind-icon">check<wbr>Text</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="icommon.html#checkwindowexist" class="tsd-kind-icon">check<wbr>Window<wbr>Exist</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="icommon.html#click" class="tsd-kind-icon">click</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="icommon.html#clickpopup" class="tsd-kind-icon">click<wbr>Popup</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="icommon.html#closecurrenttab" class="tsd-kind-icon">close<wbr>Current<wbr>Tab</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="icommon.html#closeothertabs" class="tsd-kind-icon">close<wbr>Other<wbr>Tabs</a></li>
@@ -116,6 +115,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="icommon.html#navigate" class="tsd-kind-icon">navigate</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="icommon.html#opennewtab" class="tsd-kind-icon">open<wbr>New<wbr>Tab</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="icommon.html#refresh" class="tsd-kind-icon">refresh</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="icommon.html#report" class="tsd-kind-icon">report</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="icommon.html#savescreenshot" class="tsd-kind-icon">save<wbr>Screenshot</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="icommon.html#select" class="tsd-kind-icon">select</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="icommon.html#seterrorhandler" class="tsd-kind-icon">set<wbr>Error<wbr>Handler</a></li>
@@ -143,7 +143,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:130</li>
+									<li>Defined in builtin.ts:117</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -188,7 +188,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:150</li>
+									<li>Defined in builtin.ts:137</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -234,7 +234,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:165</li>
+									<li>Defined in builtin.ts:152</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -343,7 +343,7 @@ gondola.checkEqual(value, <span class="hljs-string">"Hi"</span>, <span class="hl
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:501</li>
+									<li>Defined in builtin.ts:488</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -454,7 +454,7 @@ gondola.checkNotEqual(value, <span class="hljs-string">"Hi"</span>, <span class=
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:215</li>
+									<li>Defined in builtin.ts:202</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -496,7 +496,7 @@ gondola.checkNotEqual(value, <span class="hljs-string">"Hi"</span>, <span class=
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:178</li>
+									<li>Defined in builtin.ts:165</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -526,51 +526,6 @@ gondola.checkNotEqual(value, <span class="hljs-string">"Hi"</span>, <span class=
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="click" class="tsd-anchor"></a>
-					<h3>click</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">click<span class="tsd-signature-symbol">(</span>element<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a>, context<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in builtin.ts:98</li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Click on a link or a button, identified by a locator.</p>
-								</div>
-								<dl class="tsd-comment-tags">
-									<dt>example</dt>
-									<dd><pre><code class="language-typescript">
-<span class="hljs-keyword">await</span> gondola.click(<span class="hljs-string">"#elementId"</span>); <span class="hljs-comment">//click on element with the id "elementId";</span>
-<span class="hljs-keyword">await</span> gondola.click(<span class="hljs-string">"Login"</span>); <span class="hljs-comment">//click on button or link containing "Login";</span>
-<span class="hljs-keyword">await</span> gondola.click({name : <span class="hljs-string">"submit"</span>}, <span class="hljs-string">"#user&gt;form"</span>);</code></pre>
-									</dd>
-								</dl>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>element: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>located by label|name|CSS|XPath|strict locator.</p>
-									</div>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> context: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>(optional) element to search in CSS|XPath|Strict locator.</p>
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
 					<a name="clickpopup" class="tsd-anchor"></a>
 					<h3>click<wbr>Popup</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
@@ -580,7 +535,7 @@ gondola.checkNotEqual(value, <span class="hljs-string">"Hi"</span>, <span class=
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:111</li>
+									<li>Defined in builtin.ts:98</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -621,7 +576,7 @@ gondola.clickPopup(<span class="hljs-string">"ok"</span>);</code></pre>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:511</li>
+									<li>Defined in builtin.ts:498</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -649,7 +604,7 @@ gondola.closeCurrentTab();</code></pre>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:521</li>
+									<li>Defined in builtin.ts:508</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -677,7 +632,7 @@ gondola.closeOtherTabs();</code></pre>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:533</li>
+									<li>Defined in builtin.ts:520</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -715,7 +670,7 @@ gondola.deleteCookie(<span class="hljs-string">"test"</span>);</code></pre>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:228</li>
+									<li>Defined in builtin.ts:215</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -754,7 +709,7 @@ gondola.deleteCookie(<span class="hljs-string">"test"</span>);</code></pre>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:240</li>
+									<li>Defined in builtin.ts:227</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -794,7 +749,7 @@ gondola.deleteCookie(<span class="hljs-string">"test"</span>);</code></pre>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:256</li>
+									<li>Defined in builtin.ts:243</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -832,7 +787,7 @@ gondola.deleteCookie(<span class="hljs-string">"test"</span>);</code></pre>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:267</li>
+									<li>Defined in builtin.ts:254</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -869,7 +824,7 @@ gondola.deleteCookie(<span class="hljs-string">"test"</span>);</code></pre>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:279</li>
+									<li>Defined in builtin.ts:266</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -912,7 +867,7 @@ gondola.deleteCookie(<span class="hljs-string">"test"</span>);</code></pre>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:190</li>
+									<li>Defined in builtin.ts:177</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -950,7 +905,7 @@ gondola.deleteCookie(<span class="hljs-string">"test"</span>);</code></pre>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:293</li>
+									<li>Defined in builtin.ts:280</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -997,7 +952,7 @@ gondola.deleteCookie(<span class="hljs-string">"test"</span>);</code></pre>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:475</li>
+									<li>Defined in builtin.ts:462</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1045,7 +1000,7 @@ gondola.deleteCookie(<span class="hljs-string">"test"</span>);</code></pre>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:316</li>
+									<li>Defined in builtin.ts:303</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1074,7 +1029,7 @@ gondola.deleteCookie(<span class="hljs-string">"test"</span>);</code></pre>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:305</li>
+									<li>Defined in builtin.ts:292</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1112,7 +1067,7 @@ gondola.deleteCookie(<span class="hljs-string">"test"</span>);</code></pre>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:202</li>
+									<li>Defined in builtin.ts:189</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1150,7 +1105,7 @@ gondola.deleteCookie(<span class="hljs-string">"test"</span>);</code></pre>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:339</li>
+									<li>Defined in builtin.ts:326</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1178,7 +1133,7 @@ gondola.maximize();</code></pre>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:329</li>
+									<li>Defined in builtin.ts:316</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1217,7 +1172,7 @@ gondola.navigate(<span class="hljs-string">"http://google.com"</span>);</code></
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:543</li>
+									<li>Defined in builtin.ts:530</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1245,7 +1200,7 @@ gondola.openNewTab();</code></pre>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:553</li>
+									<li>Defined in builtin.ts:540</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1264,6 +1219,53 @@ gondola.refresh();</code></pre>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="report" class="tsd-anchor"></a>
+					<h3>report</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">report<span class="tsd-signature-symbol">(</span>description<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, imagepath<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in builtin.ts:554</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Create a report using using the the reporter set in gondola.json.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript">
+gondola.report(<span class="hljs-string">"This is a report"</span>)</code></pre>
+									</dd>
+									<dt>experimental</dt>
+									<dd><p>v1.3.
+										Only works with Mochawesome.</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>description: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>user-defined text or a caption of the image to put in the report.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> imagepath: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>(optional) path to the image to put in the report.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
 					<a name="savescreenshot" class="tsd-anchor"></a>
 					<h3>save<wbr>Screenshot</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
@@ -1273,7 +1275,7 @@ gondola.refresh();</code></pre>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:352</li>
+									<li>Defined in builtin.ts:339</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1317,7 +1319,7 @@ gondola.refresh();</code></pre>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:364</li>
+									<li>Defined in builtin.ts:351</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1360,7 +1362,7 @@ gondola.select(<span class="hljs-string">"#selectElementId"</span>, [<span class
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:378</li>
+									<li>Defined in builtin.ts:365</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1421,7 +1423,7 @@ failed at step: <span class="hljs-subst">${errorInfo.testStepName}</span> with e
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:389</li>
+									<li>Defined in builtin.ts:376</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1458,7 +1460,7 @@ gondola.setPopupText(<span class="hljs-string">"I am testing popup"</span>);</co
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:405</li>
+									<li>Defined in builtin.ts:392</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1506,7 +1508,7 @@ gondola.setState(<span class="hljs-string">"#checkboxId"</span>, <span class="hl
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:565</li>
+									<li>Defined in builtin.ts:566</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1549,7 +1551,7 @@ gondola.switchBrowserTab(<span class="hljs-string">"next"</span>);</code></pre>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:416</li>
+									<li>Defined in builtin.ts:403</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1586,7 +1588,7 @@ gondola.switchFrame(<span class="hljs-string">"//iframe[@src='https://paciellogr
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:427</li>
+									<li>Defined in builtin.ts:414</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1623,7 +1625,7 @@ gondola.wait(<span class="hljs-number">5</span>);</code></pre>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:452</li>
+									<li>Defined in builtin.ts:439</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1666,7 +1668,7 @@ gondola.waitForDisappear(<span class="hljs-string">"#buttonTest"</span>, <span c
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:440</li>
+									<li>Defined in builtin.ts:427</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1742,9 +1744,6 @@ gondola.waitForElement(<span class="hljs-string">"#buttonTest"</span>, <span cla
 								<a href="icommon.html#checkwindowexist" class="tsd-kind-icon">check<wbr>Window<wbr>Exist</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="icommon.html#click" class="tsd-kind-icon">click</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="icommon.html#clickpopup" class="tsd-kind-icon">click<wbr>Popup</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
@@ -1802,6 +1801,9 @@ gondola.waitForElement(<span class="hljs-string">"#buttonTest"</span>, <span cla
 								<a href="icommon.html#refresh" class="tsd-kind-icon">refresh</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="icommon.html#report" class="tsd-kind-icon">report</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="icommon.html#savescreenshot" class="tsd-kind-icon">save<wbr>Screenshot</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
@@ -1842,10 +1844,10 @@ gondola.waitForElement(<span class="hljs-string">"#buttonTest"</span>, <span cla
 						<a href="igondolamobile.html" class="tsd-kind-icon">IGondola<wbr>Mobile</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="ilocator.html" class="tsd-kind-icon">ILocator</a>
+						<a href="igondolaweb.html" class="tsd-kind-icon">IGondola<wbr>Web</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="iprotractor.html" class="tsd-kind-icon">IProtractor</a>
+						<a href="ilocator.html" class="tsd-kind-icon">ILocator</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="iresemble.html" class="tsd-kind-icon">IResemble</a>
