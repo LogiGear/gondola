@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>ICommon | gondolajs - v1.4.24</title>
+	<title>ICommon | gondolajs</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">gondolajs - v1.4.24</a>
+					<a href="../index.html" class="title">gondolajs</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -66,13 +66,6 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-comment">
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>Set of common actions supported by gondola</p>
-					</div>
-				</div>
-			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -129,32 +122,10 @@
 									<li>Defined in builtin.ts:318</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Check if a control exists.
-									If the control is found, the verify point is considered: Passed; otherwise the test is: Failed.</p>
-								</div>
-								<dl class="tsd-comment-tags">
-									<dt>example</dt>
-									<dd><pre><code class="language-typescript">
- <span class="hljs-comment">// check if a control with id "elementId" exists .</span>
-<span class="hljs-keyword">await</span> gondola.checkControlExist(<span class="hljs-string">"#elementId"</span>);
-
- <span class="hljs-comment">// check if a control containing "Login" exists.</span>
-<span class="hljs-keyword">await</span> gondola.checkControlExist(<span class="hljs-string">"Login"</span>);
-
- <span class="hljs-comment">// check if control that has the attribute "name=submit" exists.</span>
-<span class="hljs-keyword">await</span> gondola.checkControlExist({name: <span class="hljs-string">"submit"</span>});</code></pre>
-									</dd>
-								</dl>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>element: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>located by label|name|CSS|XPath|strict locator</p>
-									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -174,33 +145,10 @@
 									<li>Defined in builtin.ts:338</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Check if a control does not exists.
-										If the specified control is not found,
-									the verify point is considered: Passed; otherwise the test result is: Failed.</p>
-								</div>
-								<dl class="tsd-comment-tags">
-									<dt>example</dt>
-									<dd><pre><code class="language-typescript">
-<span class="hljs-comment">// check if a control with the id "elementId" does not exists .</span>
-<span class="hljs-keyword">await</span> gondola.checkControlNotExist(<span class="hljs-string">"#elementId"</span>);
-
-<span class="hljs-comment">// check if a control containing "Login" does not exists.</span>
-<span class="hljs-keyword">await</span> gondola.checkControlNotExist(<span class="hljs-string">"Login"</span>);
-
-<span class="hljs-comment">// check if a control that has attribute "name=submit"  does not exists.</span>
-<span class="hljs-keyword">await</span> gondola.checkControlNotExist({name : <span class="hljs-string">"submit"</span>});</code></pre>
-									</dd>
-								</dl>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>element: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>located by label|name|CSS|XPath|strict locator</p>
-									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -211,7 +159,7 @@
 					<a name="checkequal" class="tsd-anchor"></a>
 					<h3>check<wbr>Equal</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">check<wbr>Equal&lt;T&gt;<span class="tsd-signature-symbol">(</span>actual<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, expected<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, message<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">check<wbr>Equal&lt;T&gt;<span class="tsd-signature-symbol">(</span>actual<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, expected<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, message<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -220,20 +168,6 @@
 									<li>Defined in builtin.ts:283</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Tests for deep equality between the actual and expected parameters.
-									If objects are strictly equal, the verify point is considered: Passed; otherwise the test result is: Failed.</p>
-								</div>
-								<dl class="tsd-comment-tags">
-									<dt>example</dt>
-									<dd><pre><code class="language-typescript">
-<span class="hljs-keyword">let</span> value = <span class="hljs-keyword">await</span> gondola.getText(<span class="hljs-string">"#elementId"</span>);
-gondola.checkEqual(value, <span class="hljs-string">"Hello"</span>);
-gondola.checkEqual(value, <span class="hljs-string">"Hi"</span>, <span class="hljs-string">"value should be 'Hi'"</span>);</code></pre>
-									</dd>
-								</dl>
-							</div>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
 							<ul class="tsd-type-parameters">
 								<li>
@@ -244,21 +178,12 @@ gondola.checkEqual(value, <span class="hljs-string">"Hi"</span>, <span class="hl
 							<ul class="tsd-parameters">
 								<li>
 									<h5>actual: <span class="tsd-signature-type">T</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>actual value</p>
-									</div>
 								</li>
 								<li>
 									<h5>expected: <span class="tsd-signature-type">T</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>expected value</p>
-									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> message: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>(optional) message will throw if the values are not strictly equal</p>
-									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -278,30 +203,6 @@ gondola.checkEqual(value, <span class="hljs-string">"Hi"</span>, <span class="hl
 									<li>Defined in builtin.ts:552</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Check a JSON value using its JSON path.
-										If they satisfy deep, strict equality,
-									the verify point is considered: Passed; otherwise the test result is: Failed.</p>
-								</div>
-								<dl class="tsd-comment-tags">
-									<dt>example</dt>
-									<dd><pre><code class="language-typescript">
-<span class="hljs-keyword">const</span> data = [
- {
-   id: <span class="hljs-number">1</span>,
-   title: <span class="hljs-string">"This is title 1"</span>
- },
- {
-   id: <span class="hljs-number">2</span>,
-   title: <span class="hljs-string">"This is title 2"</span>,
- }
-];
-
-<span class="hljs-keyword">const</span> value = <span class="hljs-keyword">await</span> gondola.checkJSONValue(data, <span class="hljs-string">"[0].title"</span>, <span class="hljs-string">"This is title 1"</span>);</code></pre>
-									</dd>
-								</dl>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -322,7 +223,7 @@ gondola.checkEqual(value, <span class="hljs-string">"Hi"</span>, <span class="hl
 					<a name="checknotequal" class="tsd-anchor"></a>
 					<h3>check<wbr>Not<wbr>Equal</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">check<wbr>Not<wbr>Equal&lt;T&gt;<span class="tsd-signature-symbol">(</span>actual<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, expected<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, message<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">check<wbr>Not<wbr>Equal&lt;T&gt;<span class="tsd-signature-symbol">(</span>actual<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, expected<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, message<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -331,20 +232,6 @@ gondola.checkEqual(value, <span class="hljs-string">"Hi"</span>, <span class="hl
 									<li>Defined in builtin.ts:299</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Tests for deep strict inequality.
-									If objects are not strictly equal, the verify point is considered: Passed; otherwise the test result is: Failed.</p>
-								</div>
-								<dl class="tsd-comment-tags">
-									<dt>example</dt>
-									<dd><pre><code class="language-typescript">
-<span class="hljs-keyword">let</span> value = <span class="hljs-keyword">await</span> gondola.getText(<span class="hljs-string">"#elementId"</span>);
-gondola.checkNotEqual(value, <span class="hljs-string">"Hello"</span>);
-gondola.checkNotEqual(value, <span class="hljs-string">"Hi"</span>, <span class="hljs-string">"value should not equal 'Hi'"</span>);</code></pre>
-									</dd>
-								</dl>
-							</div>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
 							<ul class="tsd-type-parameters">
 								<li>
@@ -355,21 +242,12 @@ gondola.checkNotEqual(value, <span class="hljs-string">"Hi"</span>, <span class=
 							<ul class="tsd-parameters">
 								<li>
 									<h5>actual: <span class="tsd-signature-type">T</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>actual value</p>
-									</div>
 								</li>
 								<li>
 									<h5>expected: <span class="tsd-signature-type">T</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>expected value</p>
-									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> message: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>(optional) message will throw if the values are strictly equal</p>
-									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -389,26 +267,10 @@ gondola.checkNotEqual(value, <span class="hljs-string">"Hi"</span>, <span class=
 									<li>Defined in builtin.ts:363</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Check if text from the located element matches a given value.
-									The verify point is considered: Passed if the values match; otherwise the test result is: Failed.</p>
-								</div>
-								<dl class="tsd-comment-tags">
-									<dt>example</dt>
-									<dd><pre><code class="language-typescript">
-<span class="hljs-comment">// Compare the text from a control located by an xpath with an expected value.</span>
-<span class="hljs-keyword">await</span> gondola.checkText({<span class="hljs-string">"xpath"</span>:<span class="hljs-string">"//input[@name='button_ControlTest']"</span>},<span class="hljs-string">"ButtonTest"</span>);</code></pre>
-									</dd>
-								</dl>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>element: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>located by label|name|CSS|XPath|strict locator</p>
-									</div>
 								</li>
 								<li>
 									<h5>value: <span class="tsd-signature-type">string</span></h5>
@@ -422,7 +284,7 @@ gondola.checkNotEqual(value, <span class="hljs-string">"Hi"</span>, <span class=
 					<a name="click" class="tsd-anchor"></a>
 					<h3>click</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">click<span class="tsd-signature-symbol">(</span>element<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a>, context<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">click<span class="tsd-signature-symbol">(</span>element<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a>, context<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -431,32 +293,13 @@ gondola.checkNotEqual(value, <span class="hljs-string">"Hi"</span>, <span class=
 									<li>Defined in builtin.ts:267</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Click on a link or a button, identified by a locator.</p>
-								</div>
-								<dl class="tsd-comment-tags">
-									<dt>example</dt>
-									<dd><pre><code class="language-typescript">
-<span class="hljs-keyword">await</span> gondola.click(<span class="hljs-string">"#elementId"</span>); <span class="hljs-comment">//click on element with the id "elementId";</span>
-<span class="hljs-keyword">await</span> gondola.click(<span class="hljs-string">"Login"</span>); <span class="hljs-comment">//click on button or link containing "Login";</span>
-<span class="hljs-keyword">await</span> gondola.click({name : <span class="hljs-string">"submit"</span>}, <span class="hljs-string">"#user&gt;form"</span>);</code></pre>
-									</dd>
-								</dl>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>element: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>located by label|name|CSS|XPath|strict locator.</p>
-									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> context: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>(optional) element to search in CSS|XPath|Strict locator.</p>
-									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -476,26 +319,10 @@ gondola.checkNotEqual(value, <span class="hljs-string">"Hi"</span>, <span class=
 									<li>Defined in builtin.ts:376</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Returns a Boolean value to indicate whether or not the specified control is found.
-									Returns a Boolean value of <code>true</code> if the control is found. Otherwise it returns <code>false</code>.</p>
-								</div>
-								<dl class="tsd-comment-tags">
-									<dt>example</dt>
-									<dd><pre><code class="language-typescript">
-<span class="hljs-comment">// Returns `true` if the control with id "button_ControlTest" exists.</span>
-<span class="hljs-keyword">let</span> variable = <span class="hljs-keyword">await</span> gondola.doesControlExist(<span class="hljs-string">"#button_ControlTest"</span>);</code></pre>
-									</dd>
-								</dl>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>element: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>located by label|name|CSS|XPath|strict locator</p>
-									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -515,24 +342,10 @@ gondola.checkNotEqual(value, <span class="hljs-string">"Hi"</span>, <span class=
 									<li>Defined in builtin.ts:388</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Fills a text field or textarea with the given string. If there is already text, it will be cleared first.</p>
-								</div>
-								<dl class="tsd-comment-tags">
-									<dt>example</dt>
-									<dd><pre><code class="language-typescript">
-<span class="hljs-keyword">await</span> gondola.enter({<span class="hljs-string">"xpath"</span>:<span class="hljs-string">"//input[@name='textBox_ControlTest']"</span>},<span class="hljs-string">"This is example"</span>);</code></pre>
-									</dd>
-								</dl>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>element: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>located by label|name|CSS|XPath|strict locator.</p>
-									</div>
 								</li>
 								<li>
 									<h5>value: <span class="tsd-signature-type">string</span></h5>
@@ -555,24 +368,10 @@ gondola.checkNotEqual(value, <span class="hljs-string">"Hi"</span>, <span class=
 									<li>Defined in builtin.ts:399</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Retrieves a value from the located element and returns a string.</p>
-								</div>
-								<dl class="tsd-comment-tags">
-									<dt>example</dt>
-									<dd><pre><code class="language-typescript">
-<span class="hljs-keyword">let</span> value = <span class="hljs-keyword">await</span> gondola.get(<span class="hljs-string">"#buttonId"</span>);</code></pre>
-									</dd>
-								</dl>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>element: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>located by label|name|CSS|XPath|strict locator.</p>
-									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -592,28 +391,6 @@ gondola.checkNotEqual(value, <span class="hljs-string">"Hi"</span>, <span class=
 									<li>Defined in builtin.ts:526</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Get a JSON value using its JSON path.</p>
-								</div>
-								<dl class="tsd-comment-tags">
-									<dt>example</dt>
-									<dd><pre><code class="language-typescript">
-<span class="hljs-keyword">const</span> data = [
- {
-   id: <span class="hljs-number">1</span>,
-   title: <span class="hljs-string">"This is title 1"</span>
- },
- {
-   id: <span class="hljs-number">2</span>,
-   title: <span class="hljs-string">"This is title 2"</span>,
- }
-];
-
-<span class="hljs-keyword">const</span> value = <span class="hljs-keyword">await</span> gondola.getJSONValue(data, <span class="hljs-string">"[0].title"</span>);</code></pre>
-									</dd>
-								</dl>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -640,24 +417,10 @@ gondola.checkNotEqual(value, <span class="hljs-string">"Hi"</span>, <span class=
 									<li>Defined in builtin.ts:411</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Get selected items in list box or combo box defined by the HTML &#60;select&#62; tag.</p>
-								</div>
-								<dl class="tsd-comment-tags">
-									<dt>example</dt>
-									<dd><pre><code class="language-typescript">
-<span class="hljs-keyword">const</span> item = <span class="hljs-keyword">await</span> gondola.getSelectedItems(<span class="hljs-string">"#selectElementId"</span>);</code></pre>
-									</dd>
-								</dl>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>selectLocator: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>located by label|name|CSS|XPath|strict locator</p>
-									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -678,25 +441,10 @@ gondola.checkNotEqual(value, <span class="hljs-string">"Hi"</span>, <span class=
 									<li>Defined in builtin.ts:350</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Retrieve text from the specified element.</p>
-								</div>
-								<dl class="tsd-comment-tags">
-									<dt>example</dt>
-									<dd><pre><code class="language-typescript">
-<span class="hljs-comment">// Get the text from control with xpath.</span>
-<span class="hljs-keyword">await</span> gondola.getText({<span class="hljs-string">"xpath"</span>:<span class="hljs-string">"//input[@name='button_ControlTest']"</span>});</code></pre>
-									</dd>
-								</dl>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>element: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>located by label|name|CSS|XPath|strict locator</p>
-									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -716,26 +464,10 @@ gondola.checkNotEqual(value, <span class="hljs-string">"Hi"</span>, <span class=
 									<li>Defined in builtin.ts:424</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Opens a web page in a browser.
-										Requires a relative or absolute url.
-									If url starts with /, it opens a web page of a site defined by the url config parameter.</p>
-								</div>
-								<dl class="tsd-comment-tags">
-									<dt>example</dt>
-									<dd><pre><code class="language-typescript">
-gondola.navigate(<span class="hljs-string">"http://google.com"</span>);</code></pre>
-									</dd>
-								</dl>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>url: <span class="tsd-signature-type">string</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>url path or global url.</p>
-									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -746,7 +478,7 @@ gondola.navigate(<span class="hljs-string">"http://google.com"</span>);</code></
 					<a name="report" class="tsd-anchor"></a>
 					<h3>report</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">report<span class="tsd-signature-symbol">(</span>description<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, imagepath<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">report<span class="tsd-signature-symbol">(</span>description<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, imagepath<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -755,34 +487,13 @@ gondola.navigate(<span class="hljs-string">"http://google.com"</span>);</code></
 									<li>Defined in builtin.ts:566</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Create a report using using the the reporter set in gondola.json.</p>
-								</div>
-								<dl class="tsd-comment-tags">
-									<dt>example</dt>
-									<dd><pre><code class="language-typescript">
-gondola.report(<span class="hljs-string">"This is a report"</span>)</code></pre>
-									</dd>
-									<dt>experimental</dt>
-									<dd><p>v1.3.
-										Only works with Mochawesome.</p>
-									</dd>
-								</dl>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>description: <span class="tsd-signature-type">string</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>user-defined text or a caption of the image to put in the report.</p>
-									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> imagepath: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>(optional) path to the image to put in the report.</p>
-									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -793,7 +504,7 @@ gondola.report(<span class="hljs-string">"This is a report"</span>)</code></pre>
 					<a name="savescreenshot" class="tsd-anchor"></a>
 					<h3>save<wbr>Screenshot</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">save<wbr>Screenshot<span class="tsd-signature-symbol">(</span>fileName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, fullPage<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">save<wbr>Screenshot<span class="tsd-signature-symbol">(</span>fileName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, fullPage<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -802,31 +513,13 @@ gondola.report(<span class="hljs-string">"This is a report"</span>)</code></pre>
 									<li>Defined in builtin.ts:437</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Saves a screenshot to the output folder (set in gondola.json).</p>
-								</div>
-								<dl class="tsd-comment-tags">
-									<dt>example</dt>
-									<dd><pre><code class="language-typescript">
-<span class="hljs-keyword">await</span> gondola.saveScreenshot(<span class="hljs-string">"screenshot.png"</span>);
-<span class="hljs-keyword">await</span> gondola.saveScreenshot(<span class="hljs-string">"screenshotFullPage.png"</span>, <span class="hljs-literal">true</span>);</code></pre>
-									</dd>
-								</dl>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>fileName: <span class="tsd-signature-type">string</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>file name to save.</p>
-									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> fullPage: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>(optional) flag to enable fullscreen screenshot mode.</p>
-									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -846,30 +539,13 @@ gondola.report(<span class="hljs-string">"This is a report"</span>)</code></pre>
 									<li>Defined in builtin.ts:449</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Select items in a list box or a combo box that are defined by the HTML &#60;select&#62; tag.</p>
-								</div>
-								<dl class="tsd-comment-tags">
-									<dt>example</dt>
-									<dd><pre><code class="language-typescript">
-gondola.select(<span class="hljs-string">"#selectElementId"</span>, [<span class="hljs-string">"Green"</span>, <span class="hljs-string">"Red"</span>]);</code></pre>
-									</dd>
-								</dl>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>element: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>located by label|name|CSS|XPath|strict locator</p>
-									</div>
 								</li>
 								<li>
 									<h5>items: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>text value of items will be selected</p>
-									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -889,30 +565,13 @@ gondola.select(<span class="hljs-string">"#selectElementId"</span>, [<span class
 									<li>Defined in builtin.ts:463</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Callback the [callback] when an error happens.</p>
-								</div>
-								<dl class="tsd-comment-tags">
-									<dt>example</dt>
-									<dd><pre><code class="language-typescript">
-gondola.setErrorHandler(<span class="hljs-keyword">async</span> (errorInfo: IErrorInfo, actor: <span class="hljs-built_in">any</span>) =&gt; {
-     gondola.report(<span class="hljs-string">`Testcase: <span class="hljs-subst">${errorInfo.testCaseName}</span> \
-failed at step: <span class="hljs-subst">${errorInfo.testStepName}</span> with error: <span class="hljs-subst">${errorInfo.errorMessage}</span>`</span>);
-});</code></pre>
-									</dd>
-								</dl>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>callback: <span class="tsd-signature-type">function</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>function to be executed upon the occurrence of an error.</p>
-									</div>
 									<ul class="tsd-parameters">
 										<li class="tsd-parameter-siganture">
-											<ul class="tsd-signatures tsd-kind-type-literal">
+											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
 												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>errorInfo<span class="tsd-signature-symbol">: </span><a href="ierrorinfo.html" class="tsd-signature-type">IErrorInfo</a>, actor<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 											</ul>
 											<ul class="tsd-descriptions">
@@ -950,35 +609,13 @@ failed at step: <span class="hljs-subst">${errorInfo.testStepName}</span> with e
 									<li>Defined in builtin.ts:479</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Set state for the specified checkbox/radio button.</p>
-								</div>
-								<dl class="tsd-comment-tags">
-									<dt>example</dt>
-									<dd><pre><code class="language-typescript">
-<span class="hljs-comment">// set State = true for the element "checkboxId"</span>
-gondola.setState(<span class="hljs-string">"#checkboxId"</span>, <span class="hljs-literal">true</span>);</code></pre>
-									</dd>
-								</dl>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>element: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>located by label|name|CSS|XPath|strict locator</p>
-									</div>
 								</li>
 								<li>
 									<h5>value: <span class="tsd-signature-type">boolean</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>state to which to set the checkbox/radio<br>Allowable values:</p>
-										<ul>
-											<li>true: check the checkbox/radio</li>
-											<li>false: un-check the checkbox/radio</li>
-										</ul>
-									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -998,24 +635,10 @@ gondola.setState(<span class="hljs-string">"#checkboxId"</span>, <span class="hl
 									<li>Defined in builtin.ts:490</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Pauses execution for a number of seconds.</p>
-								</div>
-								<dl class="tsd-comment-tags">
-									<dt>example</dt>
-									<dd><pre><code class="language-typescript">
-gondola.wait(<span class="hljs-number">5</span>);</code></pre>
-									</dd>
-								</dl>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>sec: <span class="tsd-signature-type">number</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>time in seconds to wait.</p>
-									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1026,7 +649,7 @@ gondola.wait(<span class="hljs-number">5</span>);</code></pre>
 					<a name="waitforelement" class="tsd-anchor"></a>
 					<h3>wait<wbr>For<wbr>Element</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">wait<wbr>For<wbr>Element<span class="tsd-signature-symbol">(</span>element<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a>, sec<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">wait<wbr>For<wbr>Element<span class="tsd-signature-symbol">(</span>element<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a>, sec<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -1035,31 +658,13 @@ gondola.wait(<span class="hljs-number">5</span>);</code></pre>
 									<li>Defined in builtin.ts:503</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Waits for an element to be present on the page (the default amount is 1 second).</p>
-								</div>
-								<dl class="tsd-comment-tags">
-									<dt>example</dt>
-									<dd><pre><code class="language-typescript">
-<span class="hljs-comment">// Wait 5 seconds for an element with the id "#buttonTest" to be present on the page.</span>
-gondola.waitForElement(<span class="hljs-string">"#buttonTest"</span>, <span class="hljs-number">5</span>);</code></pre>
-									</dd>
-								</dl>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>element: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>located by its label|name|CSS|XPath|strict locator</p>
-									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> sec: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>(optional) time in seconds to wait</p>
-									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
