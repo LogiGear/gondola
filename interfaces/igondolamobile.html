@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>IGondolaMobile | gondolajs - v1.4.28</title>
+	<title>IGondolaMobile | gondolajs</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">gondolajs - v1.4.28</a>
+					<a href="../index.html" class="title">gondolajs</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -66,13 +66,6 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-comment">
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>set of Appium extended actions supported by Gondola</p>
-					</div>
-				</div>
-			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -125,29 +118,13 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:660</li>
+									<li>Defined in builtin.ts:646</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Checks if the specified app is installed.
-										If the specified app is installed,
-									the verify point is considered: Passed; otherwise the test result is: Failed.</p>
-								</div>
-								<dl class="tsd-comment-tags">
-									<dt>example</dt>
-									<dd><pre><code class="language-typescript">
-gondola.checkAppIsInstalled(<span class="hljs-string">"com.example.appName);</span></code></pre>
-									</dd>
-								</dl>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>appPackageId: <span class="tsd-signature-type">string</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>app package name</p>
-									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -158,61 +135,22 @@ gondola.checkAppIsInstalled(<span class="hljs-string">"com.example.appName);</sp
 					<a name="executecommand" class="tsd-anchor"></a>
 					<h3>execute<wbr>Command</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">execute<wbr>Command<span class="tsd-signature-symbol">(</span>command<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, args<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">execute<wbr>Command<span class="tsd-signature-symbol">(</span>command<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:847</li>
+									<li>Defined in builtin.ts:833</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Executes a native mobile command.<br />
-										Reference: <a href="http://appium.io/docs/en/commands/mobile-command/">http://appium.io/docs/en/commands/mobile-command/</a>.<br />
-									Security: <a href="https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/security.md">https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/security.md</a></p>
-								</div>
-								<dl class="tsd-comment-tags">
-									<dt>example</dt>
-									<dd><pre><code class="language-typescript"><span class="hljs-comment">// get current app activity name</span>
-<span class="hljs-comment">// full command: adb shell "dumpsys window windows | grep -E 'mCurrentFocus|mFocusedApp'"</span>
-<span class="hljs-keyword">await</span> gondola.runOnAndroid(<span class="hljs-keyword">async</span> () =&gt; {
-    <span class="hljs-keyword">const</span> currentAppInfo = <span class="hljs-keyword">await</span> gondola.executeCommand(<span class="hljs-string">"mobile:shell"</span>, [{
-        command: <span class="hljs-string">"dumpsys"</span>,
-        args: [
-            <span class="hljs-string">"window"</span>,
-            <span class="hljs-string">"windows"</span>,
-            <span class="hljs-string">"|"</span>,
-            <span class="hljs-string">"grep"</span>,
-            <span class="hljs-string">"-E"</span>,
-            <span class="hljs-string">"'mCurrentFocus|mFocusedApp'"</span>,
-        ],
-    }]);
-    <span class="hljs-built_in">console</span>.log(currentAppInfo);
-});
-
-<span class="hljs-comment">// get battery info on iOS</span>
-<span class="hljs-keyword">await</span> gondola.runOnIOS(<span class="hljs-keyword">async</span> () =&gt; {
-    <span class="hljs-keyword">const</span> batteryInfo = <span class="hljs-keyword">await</span> gondola.executeCommand(<span class="hljs-string">"mobile:batteryInfo"</span>, []);
-    <span class="hljs-built_in">console</span>.log(batteryInfo);
-});</code></pre>
-									</dd>
-								</dl>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>command: <span class="tsd-signature-type">string</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>command name</p>
-									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> args: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>JSON serializable argument</p>
-									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -229,20 +167,9 @@ gondola.checkAppIsInstalled(<span class="hljs-string">"com.example.appName);</sp
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:793</li>
+									<li>Defined in builtin.ts:779</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Gets a list of all available contexts</p>
-								</div>
-								<dl class="tsd-comment-tags">
-									<dt>example</dt>
-									<dd><pre><code class="language-typescript">
-<span class="hljs-keyword">let</span> allContext: <span class="hljs-built_in">string</span>[] = <span class="hljs-keyword">await</span> gondola.getAllContexts();</code></pre>
-									</dd>
-								</dl>
-							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
@@ -257,26 +184,9 @@ gondola.checkAppIsInstalled(<span class="hljs-string">"com.example.appName);</sp
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:708</li>
+									<li>Defined in builtin.ts:694</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Gets the current desired capabilities.</p>
-								</div>
-								<dl class="tsd-comment-tags">
-									<dt>example</dt>
-									<dd><pre><code class="language-typescript">
-<span class="hljs-keyword">const</span> capabilities = <span class="hljs-keyword">await</span> gondola.getCapabilities();
-<span class="hljs-keyword">if</span> (capabilities.platformName === <span class="hljs-string">"android"</span>){
-     <span class="hljs-comment">// Do something</span>
-}
-* <span class="hljs-string">``</span><span class="hljs-string">`
-@experimental v1
-&amp;#62; Can be changed or removed soon</span></code></pre>
-									</dd>
-								</dl>
-							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
@@ -291,20 +201,9 @@ gondola.checkAppIsInstalled(<span class="hljs-string">"com.example.appName);</sp
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:803</li>
+									<li>Defined in builtin.ts:789</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Retrieves the current context</p>
-								</div>
-								<dl class="tsd-comment-tags">
-									<dt>example</dt>
-									<dd><pre><code class="language-typescript">
-<span class="hljs-keyword">let</span> currentContext: <span class="hljs-built_in">string</span> = <span class="hljs-keyword">await</span> gondola.getContext();</code></pre>
-									</dd>
-								</dl>
-							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
@@ -319,22 +218,9 @@ gondola.checkAppIsInstalled(<span class="hljs-string">"com.example.appName);</sp
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:693</li>
+									<li>Defined in builtin.ts:679</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Gets the WebDriver browser.</p>
-								</div>
-								<dl class="tsd-comment-tags">
-									<dt>example</dt>
-									<dd><pre><code class="language-typescript">
-<span class="hljs-keyword">const</span> browser = <span class="hljs-keyword">await</span> gondola.getCurrentBrowser();
-<span class="hljs-keyword">const</span> element = <span class="hljs-keyword">await</span> browser.findElement(<span class="hljs-string">"accessibility id"</span>, <span class="hljs-string">"exampleId"</span>);
-* <span class="hljs-string">``</span><span class="hljs-string">`</span></code></pre>
-									</dd>
-								</dl>
-							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Client</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">Browser</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
@@ -349,20 +235,9 @@ gondola.checkAppIsInstalled(<span class="hljs-string">"com.example.appName);</sp
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:783</li>
+									<li>Defined in builtin.ts:769</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Gets device screen size</p>
-								</div>
-								<dl class="tsd-comment-tags">
-									<dt>example</dt>
-									<dd><pre><code class="language-typescript">
-<span class="hljs-keyword">let</span> screenSize = <span class="hljs-keyword">await</span> gondola.getDeviceScreenSize();</code></pre>
-									</dd>
-								</dl>
-							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">RectReturn</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
@@ -371,38 +246,22 @@ gondola.checkAppIsInstalled(<span class="hljs-string">"com.example.appName);</sp
 					<a name="getelementbounds" class="tsd-anchor"></a>
 					<h3>get<wbr>Element<wbr>Bounds</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Element<wbr>Bounds<span class="tsd-signature-symbol">(</span>element<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{ </span>height<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>left<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>top<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>width<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Element<wbr>Bounds<span class="tsd-signature-symbol">(</span>element<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:737</li>
+									<li>Defined in builtin.ts:723</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Retrieves an element&#39;s boundary.</p>
-								</div>
-								<dl class="tsd-comment-tags">
-									<dt>example</dt>
-									<dd><pre><code class="language-typescript">
-<span class="hljs-keyword">let</span> bound = <span class="hljs-keyword">await</span> gondola.getElementBounds(<span class="hljs-string">"~accessibleId"</span>);
-<span class="hljs-keyword">let</span> right = bound.left + bound.width;
-<span class="hljs-keyword">let</span> bottom = bound.top + bound.height;</code></pre>
-									</dd>
-								</dl>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>element: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>located by accessible id, xpath,... locator</p>
-									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{ </span>height<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>left<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>top<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>width<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -410,39 +269,22 @@ gondola.checkAppIsInstalled(<span class="hljs-string">"com.example.appName);</sp
 					<a name="hidedevicekeyboard" class="tsd-anchor"></a>
 					<h3>hide<wbr>Device<wbr>Keyboard</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">hide<wbr>Device<wbr>Keyboard<span class="tsd-signature-symbol">(</span>strategy<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span>, key<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">hide<wbr>Device<wbr>Keyboard<span class="tsd-signature-symbol">(</span>strategy<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span>, key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:773</li>
+									<li>Defined in builtin.ts:759</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Hides the device keyboard</p>
-								</div>
-								<dl class="tsd-comment-tags">
-									<dt>experimental</dt>
-									<dd><p>v1
-										&#62; Can be changed or removed soon</p>
-									</dd>
-								</dl>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> strategy: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>(Optional) desired strategy to close keyboard (‘tapOutside’ or ‘pressKey’)</p>
-									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> key: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>(Optional) desired key to use with strategy &quot;pressKey&quot;</p>
-									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -459,22 +301,9 @@ gondola.checkAppIsInstalled(<span class="hljs-string">"com.example.appName);</sp
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:682</li>
+									<li>Defined in builtin.ts:668</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Run all subsequent actions in parallel.</p>
-								</div>
-								<p><strong>LIMITATION:</strong> Currently, the user must wait for all currently running actions be completed
-								before switching devices.</p>
-								<dl class="tsd-comment-tags">
-									<dt>experimental</dt>
-									<dd><p>v1
-										&#62; Can be changed or removed soon</p>
-									</dd>
-								</dl>
-							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
@@ -483,48 +312,19 @@ gondola.checkAppIsInstalled(<span class="hljs-string">"com.example.appName);</sp
 					<a name="runonandroid" class="tsd-anchor"></a>
 					<h3>run<wbr>OnAndroid</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">run<wbr>OnAndroid<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span>, Function<span class="tsd-signature-symbol">?: </span><a href="" class="tsd-signature-type">Function</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">run<wbr>OnAndroid<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, Function<span class="tsd-signature-symbol">: </span><a href="" class="tsd-signature-type">Function</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:618</li>
+									<li>Defined in builtin.ts:605</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Runs the given function when testing on Android.</p>
-								</div>
-								<p>Note: When using the capabilities option, your option must be
-								declared in the gondola config file for it to work.</p>
-								<dl class="tsd-comment-tags">
-									<dt>example</dt>
-									<dd><pre><code class="language-typescript">
-gondola.runOnAndroid(<span class="hljs-keyword">async</span> () =&gt; {
-     <span class="hljs-keyword">await</span> gondola.tap(<span class="hljs-string">"~accessibleId"</span>);
-     <span class="hljs-comment">// ...</span>
-});
-
-<span class="hljs-comment">// Filter can be applied by checking for capabilities. This code only run on Android 7.0</span>
-gondola.runOnAndroid({platformVersion: <span class="hljs-string">'7.0'</span>}, <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span>{
-     <span class="hljs-comment">// ...</span>
-});
-
-<span class="hljs-comment">// Capabilities can be checked by a function. In this case , code will be executed only on android &gt;= 6</span>
-gondola.runOnAndroid(<span class="hljs-function">(<span class="hljs-params">cap</span>) =&gt;</span> {<span class="hljs-keyword">return</span> cap.platformVersion &gt;= <span class="hljs-number">6</span>}, <span class="hljs-function"><span class="hljs-params">()</span>=&gt;</span>{
-     <span class="hljs-comment">// ...</span>
-});</code></pre>
-									</dd>
-								</dl>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">any</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>capabilities use to filter</p>
-									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> Function: <a href="" class="tsd-signature-type">Function</a></h5>
@@ -538,54 +338,22 @@ gondola.runOnAndroid(<span class="hljs-function">(<span class="hljs-params">cap<
 					<a name="runonios" class="tsd-anchor"></a>
 					<h3>run<wbr>OnIOS</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">run<wbr>OnIOS<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span>, Function<span class="tsd-signature-symbol">?: </span><a href="" class="tsd-signature-type">Function</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">run<wbr>OnIOS<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, Function<span class="tsd-signature-symbol">: </span><a href="" class="tsd-signature-type">Function</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:647</li>
+									<li>Defined in builtin.ts:633</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Runs the given function when testing on iOS.</p>
-								</div>
-								<p>Note: if you&#39;re using Appium&#39;s Desired Capabilities, you must have the
-								options set in ```gondola.json`` under the helpers-&gt;Appium-&gt;desiredCapabilities section.</p>
-								<dl class="tsd-comment-tags">
-									<dt>example</dt>
-									<dd><pre><code class="language-typescript">
-gondola.runOnIOS(<span class="hljs-keyword">async</span> () =&gt; {
-     <span class="hljs-keyword">await</span> gondola.tap(<span class="hljs-string">"~accessibleId"</span>);
-     <span class="hljs-comment">// ...</span>
-});
-
-<span class="hljs-comment">// Filter can be applied by checking for capabilities. This code only run on runOnIOS 6.0</span>
-gondola.runOnIOS({platformVersion: <span class="hljs-string">'6.0'</span>}, <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
-     <span class="hljs-comment">// ...</span>
-});
-
-<span class="hljs-comment">// Capabilities can be checked by a function. In this case , code will be executed only on runOnIOS &gt;= 6</span>
-gondola.runOnIOS(<span class="hljs-function">(<span class="hljs-params">cap</span>) =&gt;</span> {<span class="hljs-keyword">return</span> cap.platformVersion &gt;= <span class="hljs-number">6</span>}, <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
-     <span class="hljs-comment">// ...</span>
-});</code></pre>
-									</dd>
-								</dl>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">any</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>capabilities use to filter</p>
-									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> Function: <a href="" class="tsd-signature-type">Function</a></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>callback function will be executed</p>
-									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -602,28 +370,13 @@ gondola.runOnIOS(<span class="hljs-function">(<span class="hljs-params">cap</spa
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:859</li>
+									<li>Defined in builtin.ts:845</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Scrolls element into view.
-									<strong>&#62; Support context &quot;WEBVIEW&quot; only</strong></p>
-								</div>
-								<dl class="tsd-comment-tags">
-									<dt>example</dt>
-									<dd><pre><code class="language-typescript">
-<span class="hljs-keyword">await</span> gondola.scrollIntoView({xpath: <span class="hljs-string">"//a"</span>}});</code></pre>
-									</dd>
-								</dl>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>element: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>located by label|name|CSS|XPath|strict locator.</p>
-									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -640,33 +393,13 @@ gondola.runOnIOS(<span class="hljs-function">(<span class="hljs-params">cap</spa
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:724</li>
+									<li>Defined in builtin.ts:710</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Sends a key event to the device.</p>
-								</div>
-								<dl class="tsd-comment-tags">
-									<dt>example</dt>
-									<dd><pre><code class="language-typescript">
-gondola.sendDeviceKeyEvent(<span class="hljs-number">3</span>);</code></pre>
-									</dd>
-									<dt>experimental</dt>
-									<dd><p>v1
-										&#62; Can be changed or removed soon</p>
-									</dd>
-								</dl>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>keyValue: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Device specific key value</p>
-										<p>List of keys: <a href="https://developer.android.com/reference/android/view/KeyEvent.html">https://developer.android.com/reference/android/view/KeyEvent.html</a>
-										LIMITATION: only supports Android</p>
-									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -677,40 +410,15 @@ gondola.sendDeviceKeyEvent(<span class="hljs-number">3</span>);</code></pre>
 					<a name="setpickervalue" class="tsd-anchor"></a>
 					<h3>set<wbr>Picker<wbr>Value</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Picker<wbr>Value<span class="tsd-signature-symbol">(</span>element<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span>, pickCompletedElement<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Picker<wbr>Value<span class="tsd-signature-symbol">(</span>element<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span>, pickCompletedElement<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:887</li>
+									<li>Defined in builtin.ts:867</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Select scroll picker Item.
-										<br />Supported Android controls:
-										<br />- android.widget.DatePicker
-										<br />- android.widget.NumberPicker
-										<br />Supported iOS controls:
-										<br />- XCUIElementTypeDatePicker
-									<br />- XCUIElementTypePickerWheel</p>
-								</div>
-								<dl class="tsd-comment-tags">
-									<dt>example</dt>
-									<dd><pre><code class="language-typescript"><span class="hljs-comment">// Single item: pickerElement is a day, month or year that is a child control of a picker</span>
-<span class="hljs-keyword">await</span> gondola.setPickerValue(pickerElement, <span class="hljs-string">"item name"</span>);
-
-<span class="hljs-comment">// Multiple items: pickerElement is a picker control. It does not include any child controls.</span>
-<span class="hljs-keyword">await</span> gondola.setPickerValue(pickerElement, [<span class="hljs-string">"one"</span>, <span class="hljs-string">"two"</span>, <span class="hljs-string">"three"</span>]);
-
-<span class="hljs-comment">// Multiple items that contain an undefined item: the undefined item will not change</span>
-<span class="hljs-comment">// and pickerElement is a picker control. It does not include any child controls.</span>
-<span class="hljs-keyword">await</span> gondola.setPickerValue(pickerElement, [<span class="hljs-string">"one"</span>, <span class="hljs-literal">undefined</span>, <span class="hljs-string">"three"</span>]);
-</code></pre>
-									</dd>
-								</dl>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -721,8 +429,6 @@ gondola.sendDeviceKeyEvent(<span class="hljs-number">3</span>);</code></pre>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> pickCompletedElement: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a></h5>
-									<div class="tsd-comment tsd-typography">
-									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -739,27 +445,13 @@ gondola.sendDeviceKeyEvent(<span class="hljs-number">3</span>);</code></pre>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:750</li>
+									<li>Defined in builtin.ts:736</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Performs a swipe on an element.</p>
-								</div>
-								<dl class="tsd-comment-tags">
-									<dt>example</dt>
-									<dd><pre><code class="language-typescript">
-<span class="hljs-keyword">await</span> gondola.swipe(<span class="hljs-string">"~accessibleId"</span>,<span class="hljs-number">0</span>, <span class="hljs-number">-1000</span>);</code></pre>
-									</dd>
-								</dl>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>element: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>located by accessible id, xpath,... locator</p>
-									</div>
 								</li>
 								<li>
 									<h5>offsetX: <span class="tsd-signature-type">number</span></h5>
@@ -782,20 +474,9 @@ gondola.sendDeviceKeyEvent(<span class="hljs-number">3</span>);</code></pre>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:764</li>
+									<li>Defined in builtin.ts:750</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Performs a swipe on the screen.</p>
-								</div>
-								<dl class="tsd-comment-tags">
-									<dt>example</dt>
-									<dd><pre><code class="language-typescript">
-<span class="hljs-keyword">await</span> gondola.swipeByCoordinates(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">600</span>);</code></pre>
-									</dd>
-								</dl>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -825,30 +506,13 @@ gondola.sendDeviceKeyEvent(<span class="hljs-number">3</span>);</code></pre>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:672</li>
+									<li>Defined in builtin.ts:658</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Run subsequent actions on a specific device.
-									To run actions in parallel on all devices, use <a href="igondolamobile.html#runonalldevices">runOnAllDevices</a>.</p>
-								</div>
-								<p><strong>LIMITATION:</strong> Currently, the user must wait for all currently running actions be completed
-								before switching devices.</p>
-								<dl class="tsd-comment-tags">
-									<dt>experimental</dt>
-									<dd><p>v1
-										&#62; an be changed or removed soon</p>
-									</dd>
-								</dl>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>deviceName: <span class="tsd-signature-type">string</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>the device name in multiremote configuration</p>
-									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -865,20 +529,9 @@ gondola.sendDeviceKeyEvent(<span class="hljs-number">3</span>);</code></pre>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:813</li>
+									<li>Defined in builtin.ts:799</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Switches to the specified context.</p>
-								</div>
-								<dl class="tsd-comment-tags">
-									<dt>example</dt>
-									<dd><pre><code class="language-typescript">
-<span class="hljs-keyword">await</span> gondola.switchToContext(<span class="hljs-string">"NATIVE_APP"</span>);</code></pre>
-									</dd>
-								</dl>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -899,32 +552,13 @@ gondola.sendDeviceKeyEvent(<span class="hljs-number">3</span>);</code></pre>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:589</li>
+									<li>Defined in builtin.ts:577</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Taps on a mobile element.</p>
-								</div>
-								<dl class="tsd-comment-tags">
-									<dt>example</dt>
-									<dd><pre><code class="language-typescript">
-gondola.tap(<span class="hljs-string">"~accessibleId"</span>);
-gondola.tap({id: <span class="hljs-string">"buttonId"</span>});
-gondola.tap({
-     android: <span class="hljs-string">"//com.android.TextView[@text='myLabel']"</span>,
-     ios: <span class="hljs-string">"~myId"</span>
-});</code></pre>
-									</dd>
-								</dl>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>element: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>located by accessible id, xpath,... locator</p>
-									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -944,10 +578,10 @@ gondola.tap({
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-interface">
-						<a href="icommon.html" class="tsd-kind-icon">ICommon</a>
+						<a href="ierrorinfo.html" class="tsd-kind-icon">IError<wbr>Info</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="ierrorinfo.html" class="tsd-kind-icon">IError<wbr>Info</a>
+						<a href="igondola.html" class="tsd-kind-icon">IGondola</a>
 					</li>
 				</ul>
 				<ul class="current">
@@ -1018,9 +652,6 @@ gondola.tap({
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-interface">
-						<a href="igondolaweb.html" class="tsd-kind-icon">IGondola<wbr>Web</a>
-					</li>
 					<li class=" tsd-kind-interface">
 						<a href="ilocator.html" class="tsd-kind-icon">ILocator</a>
 					</li>
