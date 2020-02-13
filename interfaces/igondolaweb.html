@@ -94,6 +94,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolaweb.html#closecurrenttab" class="tsd-kind-icon">close<wbr>Current<wbr>Tab</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolaweb.html#closeothertabs" class="tsd-kind-icon">close<wbr>Other<wbr>Tabs</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolaweb.html#deletecookie" class="tsd-kind-icon">delete<wbr>Cookie</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolaweb.html#doubleclick" class="tsd-kind-icon">double<wbr>Click</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolaweb.html#executescript" class="tsd-kind-icon">execute<wbr>Script</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolaweb.html#getcontrolproperty" class="tsd-kind-icon">get<wbr>Control<wbr>Property</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolaweb.html#getelementcount" class="tsd-kind-icon">get<wbr>Element<wbr>Count</a></li>
@@ -102,6 +103,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolaweb.html#maximize" class="tsd-kind-icon">maximize</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolaweb.html#opennewtab" class="tsd-kind-icon">open<wbr>New<wbr>Tab</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolaweb.html#refresh" class="tsd-kind-icon">refresh</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolaweb.html#rightclick" class="tsd-kind-icon">right<wbr>Click</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolaweb.html#setpopuptext" class="tsd-kind-icon">set<wbr>Popup<wbr>Text</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolaweb.html#switchbrowsertab" class="tsd-kind-icon">switch<wbr>Browser<wbr>Tab</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolaweb.html#switchframe" class="tsd-kind-icon">switch<wbr>Frame</a></li>
@@ -335,6 +337,47 @@ gondola.deleteCookie(<span class="hljs-string">"test"</span>);</code></pre>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="doubleclick" class="tsd-anchor"></a>
+					<h3>double<wbr>Click</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">double<wbr>Click<span class="tsd-signature-symbol">(</span>element<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a>, context<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in builtin.ts:273</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Performs a double-click on an element matched by link|button|label|CSS or XPath. Context can be specified as second parameter to narrow search.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>element: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>located by label|name|CSS|XPath|strict locator.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> context: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>(optional) element to search in CSS|XPath|Strict locator.</p>
+										<pre><code>
+await gondola.doubleClick("#elementId") //<span class="hljs-type">double</span> click <span class="hljs-keyword">on</span> element <span class="hljs-keyword">with</span> the id "elementId";
+await gondola.doubleClick("Login"); //<span class="hljs-type">double</span> click <span class="hljs-keyword">on</span> button <span class="hljs-keyword">or</span> link containing "Login";
+await gondola.doubleClick({<span class="hljs-type">name</span> : "submit"}, ".context"); //<span class="hljs-type">double</span> click <span class="hljs-keyword">on</span> element <span class="hljs-keyword">with</span> <span class="hljs-type">name</span> "submit" inside element ".context"</code></pre>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -618,6 +661,51 @@ gondola.refresh();</code></pre>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="rightclick" class="tsd-anchor"></a>
+					<h3>right<wbr>Click</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">right<wbr>Click<span class="tsd-signature-symbol">(</span>element<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a>, context<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in builtin.ts:260</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Performs right click on a clickable element matched by semantic locator, CSS or XPath.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript">
+<span class="hljs-keyword">await</span> gondola.rightClick(<span class="hljs-string">"#elementId"</span>); <span class="hljs-comment">//right click on element with the id "elementId";</span>
+<span class="hljs-keyword">await</span> gondola.rightClick(<span class="hljs-string">"Login"</span>); <span class="hljs-comment">//right click on button or link containing "Login";</span>
+<span class="hljs-keyword">await</span> gondola.rightClick({name : <span class="hljs-string">"submit"</span>}, <span class="hljs-string">".context"</span>); <span class="hljs-comment">//right click on element with name "submit" inside element ".context"</span></code></pre>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>element: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>located by label|name|CSS|XPath|strict locator.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> context: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>(optional) element to search in CSS|XPath|Strict locator.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
 					<a name="setpopuptext" class="tsd-anchor"></a>
 					<h3>set<wbr>Popup<wbr>Text</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
@@ -701,7 +789,7 @@ gondola.switchBrowserTab(<span class="hljs-string">"next"</span>);</code></pre>
 					<a name="switchframe" class="tsd-anchor"></a>
 					<h3>switch<wbr>Frame</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">switch<wbr>Frame<span class="tsd-signature-symbol">(</span>element<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">switch<wbr>Frame<span class="tsd-signature-symbol">(</span>element<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -724,7 +812,7 @@ gondola.switchFrame(<span class="hljs-string">"//iframe[@src='https://paciellogr
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>element: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> element: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>located by CSS|XPath|strict locator.</p>
 									</div>
@@ -822,6 +910,9 @@ gondola.waitForDisappear(<span class="hljs-string">"#buttonTest"</span>, <span c
 								<a href="igondolaweb.html#deletecookie" class="tsd-kind-icon">delete<wbr>Cookie</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="igondolaweb.html#doubleclick" class="tsd-kind-icon">double<wbr>Click</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="igondolaweb.html#executescript" class="tsd-kind-icon">execute<wbr>Script</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
@@ -844,6 +935,9 @@ gondola.waitForDisappear(<span class="hljs-string">"#buttonTest"</span>, <span c
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="igondolaweb.html#refresh" class="tsd-kind-icon">refresh</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="igondolaweb.html#rightclick" class="tsd-kind-icon">right<wbr>Click</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="igondolaweb.html#setpopuptext" class="tsd-kind-icon">set<wbr>Popup<wbr>Text</a>
