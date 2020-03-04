@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>IResemble | gondolajs</title>
+	<title>IScrollIntoViewOptions | gondolajs</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,10 +56,10 @@
 					<a href="../index.html">Globals</a>
 				</li>
 				<li>
-					<a href="iresemble.html">IResemble</a>
+					<a href="iscrollintoviewoptions.html">IScrollIntoViewOptions</a>
 				</li>
 			</ul>
-			<h1>Interface IResemble</h1>
+			<h1>Interface IScrollIntoViewOptions</h1>
 		</div>
 	</div>
 </header>
@@ -69,12 +69,17 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Helper for resemble.js, used for image comparison in tests supported by Gondola.</p>
+						<p>define scrolling options.</p>
 					</div>
 					<dl class="tsd-comment-tags">
-						<dt>experimental</dt>
-						<dd><p>v1
-							&#62; Can be changed or removed soon</p>
+						<dt>field</dt>
+						<dd><p>behavior - Defines the transition animation. One of &quot;auto&quot; or &quot;smooth&quot;. Defaults to &quot;auto&quot;.</p>
+						</dd>
+						<dt>field</dt>
+						<dd><p>block - Defines vertical alignment. One of &quot;start&quot;, &quot;center&quot;, &quot;end&quot;, or &quot;nearest&quot;. Defaults to &quot;start&quot;.</p>
+						</dd>
+						<dt>field</dt>
+						<dd><p>inline - Defines horizontal alignment. One of &quot;start&quot;, &quot;center&quot;, &quot;end&quot;, or &quot;nearest&quot;. Defaults to &quot;nearest&quot;.</p>
 						</dd>
 					</dl>
 				</div>
@@ -83,7 +88,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">IResemble</span>
+						<span class="target">IScrollIntoViewOptions</span>
 					</li>
 				</ul>
 			</section>
@@ -92,110 +97,47 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Methods</h3>
+							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iresemble.html#seevisualdiff" class="tsd-kind-icon">see<wbr>Visual<wbr>Diff</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iresemble.html#seevisualdiffforelement" class="tsd-kind-icon">see<wbr>Visual<wbr>Diff<wbr>For<wbr>Element</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iscrollintoviewoptions.html#behavior" class="tsd-kind-icon">behavior</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iscrollintoviewoptions.html#block" class="tsd-kind-icon">block</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iscrollintoviewoptions.html#inline" class="tsd-kind-icon">inline</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="seevisualdiff" class="tsd-anchor"></a>
-					<h3>see<wbr>Visual<wbr>Diff</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">see<wbr>Visual<wbr>Diff<span class="tsd-signature-symbol">(</span>baseImage<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in builtin.ts:1291</li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>See the Visual Difference between the Base Image and a Screenshot Image</p>
-								</div>
-								<dl class="tsd-comment-tags">
-									<dt>experimental</dt>
-									<dd><p>v1
-										&#62; Can be changed or removed soon</p>
-									</dd>
-								</dl>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>baseImage: <span class="tsd-signature-type">string</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Name of the Base Image (Base Image path is taken from Configuration)</p>
-									</div>
-								</li>
-								<li>
-									<h5>options: <span class="tsd-signature-type">any</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Options ex {prepareBaseImage: true, tolerance: 5} along with Resemble JS Options,
-										read more here: <a href="https://github.com/rsmbl/Resemble.js">https://github.com/rsmbl/Resemble.js</a></p>
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
-						</li>
-					</ul>
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="behavior" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> behavior</h3>
+					<div class="tsd-signature tsd-kind-icon">behavior<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in builtin.ts:44</li>
+						</ul>
+					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="seevisualdiffforelement" class="tsd-anchor"></a>
-					<h3>see<wbr>Visual<wbr>Diff<wbr>For<wbr>Element</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">see<wbr>Visual<wbr>Diff<wbr>For<wbr>Element<span class="tsd-signature-symbol">(</span>selector<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a>, baseImage<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in builtin.ts:1303</li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>See the Visual Diff for an Element on a Page.</p>
-								</div>
-								<dl class="tsd-comment-tags">
-									<dt>experimental</dt>
-									<dd><p>v1
-										&#62; Can be changed or removed soon</p>
-									</dd>
-								</dl>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>selector: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Selector which has to be compared, CSS|XPath|ID</p>
-									</div>
-								</li>
-								<li>
-									<h5>baseImage: <span class="tsd-signature-type">string</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Base Image for comparison</p>
-									</div>
-								</li>
-								<li>
-									<h5>options: <span class="tsd-signature-type">any</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Options ex {prepareBaseImage: true, tolerance: 5} along with Resemble JS Options,
-										read more here: <a href="https://github.com/rsmbl/Resemble.js">https://github.com/rsmbl/Resemble.js</a></p>
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
-						</li>
-					</ul>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="block" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> block</h3>
+					<div class="tsd-signature tsd-kind-icon">block<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in builtin.ts:45</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="inline" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> inline</h3>
+					<div class="tsd-signature tsd-kind-icon">inline<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in builtin.ts:46</li>
+						</ul>
+					</aside>
 				</section>
 			</section>
 		</div>
@@ -227,27 +169,30 @@
 					<li class=" tsd-kind-interface">
 						<a href="ilocator.html" class="tsd-kind-icon">ILocator</a>
 					</li>
+					<li class=" tsd-kind-interface">
+						<a href="iresemble.html" class="tsd-kind-icon">IResemble</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="irestapi.html" class="tsd-kind-icon">IRest<wbr>Api</a>
+					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface">
-						<a href="iresemble.html" class="tsd-kind-icon">IResemble</a>
+						<a href="iscrollintoviewoptions.html" class="tsd-kind-icon">IScroll<wbr>Into<wbr>View<wbr>Options</a>
 						<ul>
-							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="iresemble.html#seevisualdiff" class="tsd-kind-icon">see<wbr>Visual<wbr>Diff</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="iscrollintoviewoptions.html#behavior" class="tsd-kind-icon">behavior</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="iresemble.html#seevisualdiffforelement" class="tsd-kind-icon">see<wbr>Visual<wbr>Diff<wbr>For<wbr>Element</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="iscrollintoviewoptions.html#block" class="tsd-kind-icon">block</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="iscrollintoviewoptions.html#inline" class="tsd-kind-icon">inline</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-interface">
-						<a href="irestapi.html" class="tsd-kind-icon">IRest<wbr>Api</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="iscrollintoviewoptions.html" class="tsd-kind-icon">IScroll<wbr>Into<wbr>View<wbr>Options</a>
-					</li>
 				</ul>
 			</nav>
 		</div>
