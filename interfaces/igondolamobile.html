@@ -91,6 +91,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolamobile.html#checkappisinstalled" class="tsd-kind-icon">check<wbr>App<wbr>IsInstalled</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolamobile.html#executecommand" class="tsd-kind-icon">execute<wbr>Command</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolamobile.html#getallcontexts" class="tsd-kind-icon">get<wbr>All<wbr>Contexts</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolamobile.html#getcapabilities" class="tsd-kind-icon">get<wbr>Capabilities</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolamobile.html#getcontext" class="tsd-kind-icon">get<wbr>Context</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolamobile.html#getcurrentbrowser" class="tsd-kind-icon">get<wbr>Current<wbr>Browser</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="igondolamobile.html#getdevicescreensize" class="tsd-kind-icon">get<wbr>Device<wbr>Screen<wbr>Size</a></li>
@@ -124,7 +125,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:984</li>
+									<li>Defined in builtin.ts:660</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -163,7 +164,7 @@ gondola.checkAppIsInstalled(<span class="hljs-string">"com.example.appName);</sp
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:1157</li>
+									<li>Defined in builtin.ts:847</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -228,7 +229,7 @@ gondola.checkAppIsInstalled(<span class="hljs-string">"com.example.appName);</sp
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:1103</li>
+									<li>Defined in builtin.ts:793</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -247,6 +248,40 @@ gondola.checkAppIsInstalled(<span class="hljs-string">"com.example.appName);</sp
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="getcapabilities" class="tsd-anchor"></a>
+					<h3>get<wbr>Capabilities</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Capabilities<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in builtin.ts:708</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Gets the current desired capabilities.</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript">
+<span class="hljs-keyword">const</span> capabilities = <span class="hljs-keyword">await</span> gondola.getCapabilities();
+<span class="hljs-keyword">if</span> (capabilities.platformName === <span class="hljs-string">"android"</span>){
+     <span class="hljs-comment">// Do something</span>
+}
+* <span class="hljs-string">``</span><span class="hljs-string">`
+@experimental v1
+&amp;#62; Can be changed or removed soon</span></code></pre>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
 					<a name="getcontext" class="tsd-anchor"></a>
 					<h3>get<wbr>Context</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
@@ -256,7 +291,7 @@ gondola.checkAppIsInstalled(<span class="hljs-string">"com.example.appName);</sp
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:1113</li>
+									<li>Defined in builtin.ts:803</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -284,7 +319,7 @@ gondola.checkAppIsInstalled(<span class="hljs-string">"com.example.appName);</sp
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:1018</li>
+									<li>Defined in builtin.ts:693</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -314,7 +349,7 @@ gondola.checkAppIsInstalled(<span class="hljs-string">"com.example.appName);</sp
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:1093</li>
+									<li>Defined in builtin.ts:783</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -342,7 +377,7 @@ gondola.checkAppIsInstalled(<span class="hljs-string">"com.example.appName);</sp
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:1047</li>
+									<li>Defined in builtin.ts:737</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -381,7 +416,7 @@ gondola.checkAppIsInstalled(<span class="hljs-string">"com.example.appName);</sp
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:1083</li>
+									<li>Defined in builtin.ts:773</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -424,7 +459,7 @@ gondola.checkAppIsInstalled(<span class="hljs-string">"com.example.appName);</sp
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:1006</li>
+									<li>Defined in builtin.ts:682</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -454,7 +489,7 @@ gondola.checkAppIsInstalled(<span class="hljs-string">"com.example.appName);</sp
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:942</li>
+									<li>Defined in builtin.ts:618</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -509,7 +544,7 @@ gondola.runOnAndroid(<span class="hljs-function">(<span class="hljs-params">cap<
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:971</li>
+									<li>Defined in builtin.ts:647</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -567,7 +602,7 @@ gondola.runOnIOS(<span class="hljs-function">(<span class="hljs-params">cap</spa
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:1169</li>
+									<li>Defined in builtin.ts:859</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -605,7 +640,7 @@ gondola.runOnIOS(<span class="hljs-function">(<span class="hljs-params">cap</spa
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:1034</li>
+									<li>Defined in builtin.ts:724</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -648,7 +683,7 @@ gondola.sendDeviceKeyEvent(<span class="hljs-number">3</span>);</code></pre>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:1197</li>
+									<li>Defined in builtin.ts:887</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -704,7 +739,7 @@ gondola.sendDeviceKeyEvent(<span class="hljs-number">3</span>);</code></pre>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:1060</li>
+									<li>Defined in builtin.ts:750</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -747,7 +782,7 @@ gondola.sendDeviceKeyEvent(<span class="hljs-number">3</span>);</code></pre>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:1074</li>
+									<li>Defined in builtin.ts:764</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -790,7 +825,7 @@ gondola.sendDeviceKeyEvent(<span class="hljs-number">3</span>);</code></pre>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:996</li>
+									<li>Defined in builtin.ts:672</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -830,7 +865,7 @@ gondola.sendDeviceKeyEvent(<span class="hljs-number">3</span>);</code></pre>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:1123</li>
+									<li>Defined in builtin.ts:813</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -864,7 +899,7 @@ gondola.sendDeviceKeyEvent(<span class="hljs-number">3</span>);</code></pre>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:913</li>
+									<li>Defined in builtin.ts:589</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -909,13 +944,10 @@ gondola.tap({
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-interface">
-						<a href="icoordinate.html" class="tsd-kind-icon">ICoordinate</a>
+						<a href="icommon.html" class="tsd-kind-icon">ICommon</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="ierrorinfo.html" class="tsd-kind-icon">IError<wbr>Info</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="igondola.html" class="tsd-kind-icon">IGondola</a>
 					</li>
 				</ul>
 				<ul class="current">
@@ -930,6 +962,9 @@ gondola.tap({
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="igondolamobile.html#getallcontexts" class="tsd-kind-icon">get<wbr>All<wbr>Contexts</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="igondolamobile.html#getcapabilities" class="tsd-kind-icon">get<wbr>Capabilities</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="igondolamobile.html#getcontext" class="tsd-kind-icon">get<wbr>Context</a>
@@ -994,9 +1029,6 @@ gondola.tap({
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="irestapi.html" class="tsd-kind-icon">IRest<wbr>Api</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="iscrollintoviewoptions.html" class="tsd-kind-icon">IScroll<wbr>Into<wbr>View<wbr>Options</a>
 					</li>
 				</ul>
 			</nav>
