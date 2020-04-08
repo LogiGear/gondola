@@ -134,7 +134,7 @@
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Check if a control exists.
+									<p>Checks if a control exists.
 									If the control is found, the verify point is considered: Passed; otherwise the test is: Failed.</p>
 								</div>
 								<dl class="tsd-comment-tags">
@@ -156,7 +156,7 @@
 								<li>
 									<h5>element: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>located by label|name|CSS|XPath|strict locator</p>
+										<p>located by CSS|XPath|ILocator.</p>
 									</div>
 								</li>
 							</ul>
@@ -179,7 +179,7 @@
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Check if a control does not exists.
+									<p>Checks if a control does not exist.
 										If the specified control is not found,
 									the verify point is considered: Passed; otherwise the test result is: Failed.</p>
 								</div>
@@ -202,7 +202,7 @@
 								<li>
 									<h5>element: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>located by label|name|CSS|XPath|strict locator</p>
+										<p>located by CSS|XPath|ILocator.</p>
 									</div>
 								</li>
 							</ul>
@@ -225,7 +225,7 @@
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Check if the first element with given locator has an attribute whose value matches the provided one.
+									<p>Checks if the first element with given locator has an attribute whose value matches the provided one.
 									The verify point is considered: Passed if the values match; otherwise the test result is: Failed.</p>
 								</div>
 								<dl class="tsd-comment-tags">
@@ -241,7 +241,7 @@
 								<li>
 									<h5>element: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>located by label|name|CSS|XPath|strict locator</p>
+										<p>located by CSS|XPath|ILocator.</p>
 									</div>
 								</li>
 								<li>
@@ -329,12 +329,12 @@ gondola.checkEqual(value, <span class="hljs-string">"Hi"</span>, <span class="hl
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:990</li>
+									<li>Defined in builtin.ts:988</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Check a JSON value using its JSON path.
+									<p>Checks a JSON value using its JSON path.
 										If they satisfy deep, strict equality,
 									the verify point is considered: Passed; otherwise the test result is: Failed.</p>
 								</div>
@@ -445,7 +445,7 @@ gondola.checkNotEqual(value, <span class="hljs-string">"Hi"</span>, <span class=
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Check if text from the located element matches a given value.
+									<p>Checks if text from the located element matches a given value.
 									The verify point is considered: Passed if the values match; otherwise the test result is: Failed.</p>
 								</div>
 								<dl class="tsd-comment-tags">
@@ -461,7 +461,7 @@ gondola.checkNotEqual(value, <span class="hljs-string">"Hi"</span>, <span class=
 								<li>
 									<h5>element: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>located by label|name|CSS|XPath|strict locator</p>
+										<p>located by CSS|XPath|ILocator.</p>
 									</div>
 								</li>
 								<li>
@@ -503,7 +503,7 @@ gondola.checkNotEqual(value, <span class="hljs-string">"Hi"</span>, <span class=
 								<li>
 									<h5>element: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>located by label|name|CSS|XPath|strict locator</p>
+										<p>located by CSS|XPath|ILocator.</p>
 									</div>
 								</li>
 							</ul>
@@ -526,7 +526,7 @@ gondola.checkNotEqual(value, <span class="hljs-string">"Hi"</span>, <span class=
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Fills a text field or textarea with the given string. If there is already text, it will be cleared first.</p>
+									<p>Fills a text field or &lt;textarea&gt; with the given string. If there is already text, it will be cleared first.</p>
 								</div>
 								<dl class="tsd-comment-tags">
 									<dt>example</dt>
@@ -540,7 +540,7 @@ gondola.checkNotEqual(value, <span class="hljs-string">"Hi"</span>, <span class=
 								<li>
 									<h5>element: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>located by label|name|CSS|XPath|strict locator.</p>
+										<p>located by CSS|XPath|ILocator.</p>
 									</div>
 								</li>
 								<li>
@@ -580,7 +580,7 @@ gondola.checkNotEqual(value, <span class="hljs-string">"Hi"</span>, <span class=
 								<li>
 									<h5>element: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>located by label|name|CSS|XPath|strict locator.
+										<p>located by CSS|XPath|ILocator.
 										In case mobile, only works iOS</p>
 									</div>
 								</li>
@@ -599,7 +599,7 @@ gondola.checkNotEqual(value, <span class="hljs-string">"Hi"</span>, <span class=
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:811</li>
+									<li>Defined in builtin.ts:809</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -612,10 +612,7 @@ gondola.checkNotEqual(value, <span class="hljs-string">"Hi"</span>, <span class=
 <span class="hljs-keyword">const</span> capabilities = <span class="hljs-keyword">await</span> gondola.getCapabilities();
 <span class="hljs-keyword">if</span> (capabilities.platformName === <span class="hljs-string">"android"</span>){
      <span class="hljs-comment">// Do something</span>
-}
-* <span class="hljs-string">``</span><span class="hljs-string">`
-@experimental v1
-&amp;#62; Can be changed or removed soon</span></code></pre>
+}</code></pre>
 									</dd>
 								</dl>
 							</div>
@@ -633,7 +630,7 @@ gondola.checkNotEqual(value, <span class="hljs-string">"Hi"</span>, <span class=
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:823</li>
+									<li>Defined in builtin.ts:821</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -652,7 +649,7 @@ gondola.checkNotEqual(value, <span class="hljs-string">"Hi"</span>, <span class=
 								<li>
 									<h5>element: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>located by label|name|CSS|XPath|strict locator.</p>
+										<p>located by CSS|XPath|ILocator.</p>
 									</div>
 								</li>
 								<li>
@@ -676,7 +673,7 @@ gondola.checkNotEqual(value, <span class="hljs-string">"Hi"</span>, <span class=
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:835</li>
+									<li>Defined in builtin.ts:833</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -696,7 +693,7 @@ gondola.checkNotEqual(value, <span class="hljs-string">"Hi"</span>, <span class=
 								<li>
 									<h5>element: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>located by label|name|CSS|XPath|strict locator</p>
+										<p>located by CSS|XPath|ILocator</p>
 									</div>
 								</li>
 							</ul>
@@ -714,13 +711,12 @@ gondola.checkNotEqual(value, <span class="hljs-string">"Hi"</span>, <span class=
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:964</li>
+									<li>Defined in builtin.ts:962</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Get a JSON value using its JSON path.
-									Return empty array [] in case jsonPath is not exist</p>
+									<p>Gets a JSON value using its JSON path.</p>
 								</div>
 								<dl class="tsd-comment-tags">
 									<dt>example</dt>
@@ -750,6 +746,7 @@ gondola.checkNotEqual(value, <span class="hljs-string">"Hi"</span>, <span class=
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+							<p>array[] of found items or empty array if jsonPath does not exist</p>
 						</li>
 					</ul>
 				</section>
@@ -763,12 +760,12 @@ gondola.checkNotEqual(value, <span class="hljs-string">"Hi"</span>, <span class=
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:847</li>
+									<li>Defined in builtin.ts:845</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Get selected items in list box or combo box defined by the HTML &#60;select&#62; tag.</p>
+									<p>Gets the selected items in list box or combo box defined by the HTML &#60;select&#62; tag.</p>
 								</div>
 								<dl class="tsd-comment-tags">
 									<dt>example</dt>
@@ -782,7 +779,7 @@ gondola.checkNotEqual(value, <span class="hljs-string">"Hi"</span>, <span class=
 								<li>
 									<h5>selectLocator: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>located by label|name|CSS|XPath|strict locator</p>
+										<p>located by CSS|XPath|ILocator</p>
 									</div>
 								</li>
 							</ul>
@@ -806,7 +803,7 @@ gondola.checkNotEqual(value, <span class="hljs-string">"Hi"</span>, <span class=
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Retrieve text from the specified element.</p>
+									<p>Retrieves text from the specified element.</p>
 								</div>
 								<dl class="tsd-comment-tags">
 									<dt>example</dt>
@@ -821,7 +818,7 @@ gondola.checkNotEqual(value, <span class="hljs-string">"Hi"</span>, <span class=
 								<li>
 									<h5>element: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>located by label|name|CSS|XPath|strict locator</p>
+										<p>located by CSS|XPath|ILocator.</p>
 									</div>
 								</li>
 							</ul>
@@ -839,12 +836,12 @@ gondola.checkNotEqual(value, <span class="hljs-string">"Hi"</span>, <span class=
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:1004</li>
+									<li>Defined in builtin.ts:1002</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Create a report using using the the reporter set in gondola.json.</p>
+									<p>Creates a report using using the the reporter set in gondola.json.</p>
 								</div>
 								<dl class="tsd-comment-tags">
 									<dt>example</dt>
@@ -886,12 +883,12 @@ gondola.report(<span class="hljs-string">"This is a report"</span>)</code></pre>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:862</li>
+									<li>Defined in builtin.ts:860</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Save a screenshot of the current browsing context to a PNG file and put into the output folder (set in gondola.json).
+									<p>Saves a screenshot of the current browsing context to a PNG file and put into the output folder (set in gondola.json).
 										Be aware that, if we set the &#39;fullPage&#39; value to &#39;true&#39;, some browser drivers take screenshots of
 									the whole document (e.g. Geckodriver-Firefox and Safaridriver) and others only of the current viewport (e.g. Chromedriver).</p>
 								</div>
@@ -932,12 +929,12 @@ gondola.report(<span class="hljs-string">"This is a report"</span>)</code></pre>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:874</li>
+									<li>Defined in builtin.ts:872</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Select items in a list box or a combo box that are defined by the HTML &#60;select&#62; tag.</p>
+									<p>Selects items in a list box or a combo box that are defined by the HTML &#60;select&#62; tag.</p>
 								</div>
 								<dl class="tsd-comment-tags">
 									<dt>example</dt>
@@ -951,13 +948,13 @@ gondola.select(<span class="hljs-string">"#selectElementId"</span>, [<span class
 								<li>
 									<h5>element: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>located by label|name|CSS|XPath|strict locator</p>
+										<p>located by CSS|XPath|ILocator.</p>
 									</div>
 								</li>
 								<li>
 									<h5>items: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>text value of items will be selected</p>
+										<p>text value of items will be selected.</p>
 									</div>
 								</li>
 							</ul>
@@ -975,7 +972,7 @@ gondola.select(<span class="hljs-string">"#selectElementId"</span>, [<span class
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:888</li>
+									<li>Defined in builtin.ts:886</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1036,12 +1033,12 @@ failed at step: <span class="hljs-subst">${errorInfo.testStepName}</span> with e
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:904</li>
+									<li>Defined in builtin.ts:902</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Set state for the specified checkbox/radio button.</p>
+									<p>Sets the state for the specified checkbox/radio button.</p>
 								</div>
 								<dl class="tsd-comment-tags">
 									<dt>example</dt>
@@ -1056,13 +1053,14 @@ gondola.setState(<span class="hljs-string">"#checkboxId"</span>, <span class="hl
 								<li>
 									<h5>element: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>located by label|name|CSS|XPath|strict locator</p>
+										<p>located by CSS|XPath|ILocator.</p>
 									</div>
 								</li>
 								<li>
 									<h5>value: <span class="tsd-signature-type">boolean</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>state to which to set the checkbox/radio<br>Allowable values:</p>
+										<p>state to which to set the checkbox/radio button.
+										Allowable values:</p>
 										<ul>
 											<li>true: check the checkbox/radio</li>
 											<li>false: un-check the checkbox/radio</li>
@@ -1084,7 +1082,7 @@ gondola.setState(<span class="hljs-string">"#checkboxId"</span>, <span class="hl
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:915</li>
+									<li>Defined in builtin.ts:913</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1121,7 +1119,7 @@ gondola.wait(<span class="hljs-number">5</span>);</code></pre>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:927</li>
+									<li>Defined in builtin.ts:925</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1140,7 +1138,7 @@ gondola.waitForDisappear(<span class="hljs-string">"#buttonTest"</span>, <span c
 								<li>
 									<h5>locator: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>element located by its CSS|XPath|strict locator.</p>
+										<p>element located by CSS|XPath|strict locator.</p>
 									</div>
 								</li>
 								<li>
@@ -1164,7 +1162,7 @@ gondola.waitForDisappear(<span class="hljs-string">"#buttonTest"</span>, <span c
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:940</li>
+									<li>Defined in builtin.ts:938</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1184,7 +1182,7 @@ gondola.waitForElement(<span class="hljs-string">"#buttonTest"</span>, <span cla
 								<li>
 									<h5>element: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="ilocator.html" class="tsd-signature-type">ILocator</a></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>located by its label|name|CSS|XPath|strict locator</p>
+										<p>located by CSS|XPath|ILocator.</p>
 									</div>
 								</li>
 								<li>
