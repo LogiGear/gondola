@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>IGondola | gondolajs</title>
-	<meta name="description" content="">
+	<meta name="description" content="Documentation for gondolajs">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
 </head>
@@ -13,7 +13,7 @@
 	<div class="tsd-page-toolbar">
 		<div class="container">
 			<div class="table-wrap">
-				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
 					<div class="field">
 						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
 						<input id="tsd-search-field" type="text" />
@@ -129,7 +129,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:722</li>
+									<li>Defined in builtin.ts:727</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -140,14 +140,14 @@
 								<dl class="tsd-comment-tags">
 									<dt>example</dt>
 									<dd><pre><code class="language-typescript">
- <span class="hljs-comment">// check if a control with id "elementId" exists .</span>
-<span class="hljs-keyword">await</span> gondola.checkControlExist(<span class="hljs-string">"#elementId"</span>);
+ <span class="hljs-comment">// check if a control with id &quot;elementId&quot; exists .</span>
+<span class="hljs-keyword">await</span> gondola.checkControlExist(<span class="hljs-string">&quot;#elementId&quot;</span>);
 
- <span class="hljs-comment">// check if a control containing "Login" exists.</span>
-<span class="hljs-keyword">await</span> gondola.checkControlExist(<span class="hljs-string">"Login"</span>);
+ <span class="hljs-comment">// check if a control containing &quot;Login&quot; exists.</span>
+<span class="hljs-keyword">await</span> gondola.checkControlExist(<span class="hljs-string">&quot;Login&quot;</span>);
 
- <span class="hljs-comment">// check if control that has the attribute "name=submit" exists.</span>
-<span class="hljs-keyword">await</span> gondola.checkControlExist({name: <span class="hljs-string">"submit"</span>});</code></pre>
+ <span class="hljs-comment">// check if control that has the attribute &quot;name=submit&quot; exists.</span>
+<span class="hljs-keyword">await</span> gondola.checkControlExist({name: <span class="hljs-string">&quot;submit&quot;</span>});</code></pre>
 									</dd>
 								</dl>
 							</div>
@@ -174,7 +174,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:742</li>
+									<li>Defined in builtin.ts:747</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -186,14 +186,14 @@
 								<dl class="tsd-comment-tags">
 									<dt>example</dt>
 									<dd><pre><code class="language-typescript">
-<span class="hljs-comment">// check if a control with the id "elementId" does not exists .</span>
-<span class="hljs-keyword">await</span> gondola.checkControlNotExist(<span class="hljs-string">"#elementId"</span>);
+<span class="hljs-comment">// check if a control with the id &quot;elementId&quot; does not exists .</span>
+<span class="hljs-keyword">await</span> gondola.checkControlNotExist(<span class="hljs-string">&quot;#elementId&quot;</span>);
 
-<span class="hljs-comment">// check if a control containing "Login" does not exists.</span>
-<span class="hljs-keyword">await</span> gondola.checkControlNotExist(<span class="hljs-string">"Login"</span>);
+<span class="hljs-comment">// check if a control containing &quot;Login&quot; does not exists.</span>
+<span class="hljs-keyword">await</span> gondola.checkControlNotExist(<span class="hljs-string">&quot;Login&quot;</span>);
 
-<span class="hljs-comment">// check if a control that has attribute "name=submit"  does not exists.</span>
-<span class="hljs-keyword">await</span> gondola.checkControlNotExist({name : <span class="hljs-string">"submit"</span>});</code></pre>
+<span class="hljs-comment">// check if a control that has attribute &quot;name=submit&quot;  does not exists.</span>
+<span class="hljs-keyword">await</span> gondola.checkControlNotExist({name : <span class="hljs-string">&quot;submit&quot;</span>});</code></pre>
 									</dd>
 								</dl>
 							</div>
@@ -220,7 +220,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:757</li>
+									<li>Defined in builtin.ts:762</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -231,8 +231,8 @@
 								<dl class="tsd-comment-tags">
 									<dt>example</dt>
 									<dd><pre><code class="language-typescript">
-<span class="hljs-comment">// Compare the value of attribute "name" from a control with id "buttonId1" against an expected value.</span>
-<span class="hljs-keyword">await</span> gondola.checkControlProperty(<span class="hljs-string">"#buttonId1"</span>,<span class="hljs-string">"name"</span>,<span class="hljs-string">"Button 1"</span>);</code></pre>
+<span class="hljs-comment">// Compare the value of attribute &quot;name&quot; from a control with id &quot;buttonId1&quot; against an expected value.</span>
+<span class="hljs-keyword">await</span> gondola.checkControlProperty(<span class="hljs-string">&quot;#buttonId1&quot;</span>,<span class="hljs-string">&quot;name&quot;</span>,<span class="hljs-string">&quot;Button 1&quot;</span>);</code></pre>
 									</dd>
 								</dl>
 							</div>
@@ -271,7 +271,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:687</li>
+									<li>Defined in builtin.ts:692</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -282,9 +282,9 @@
 								<dl class="tsd-comment-tags">
 									<dt>example</dt>
 									<dd><pre><code class="language-typescript">
-<span class="hljs-keyword">let</span> value = <span class="hljs-keyword">await</span> gondola.getText(<span class="hljs-string">"#elementId"</span>);
-gondola.checkEqual(value, <span class="hljs-string">"Hello"</span>);
-gondola.checkEqual(value, <span class="hljs-string">"Hi"</span>, <span class="hljs-string">"value should be 'Hi'"</span>);</code></pre>
+<span class="hljs-keyword">let</span> value = <span class="hljs-keyword">await</span> gondola.getText(<span class="hljs-string">&quot;#elementId&quot;</span>);
+gondola.checkEqual(value, <span class="hljs-string">&quot;Hello&quot;</span>);
+gondola.checkEqual(value, <span class="hljs-string">&quot;Hi&quot;</span>, <span class="hljs-string">&quot;value should be &#x27;Hi&#x27;&quot;</span>);</code></pre>
 									</dd>
 								</dl>
 							</div>
@@ -329,7 +329,7 @@ gondola.checkEqual(value, <span class="hljs-string">"Hi"</span>, <span class="hl
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:1011</li>
+									<li>Defined in builtin.ts:1016</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -344,15 +344,15 @@ gondola.checkEqual(value, <span class="hljs-string">"Hi"</span>, <span class="hl
 <span class="hljs-keyword">const</span> data = [
  {
    id: <span class="hljs-number">1</span>,
-   title: <span class="hljs-string">"This is title 1"</span>
+   title: <span class="hljs-string">&quot;This is title 1&quot;</span>
  },
  {
    id: <span class="hljs-number">2</span>,
-   title: <span class="hljs-string">"This is title 2"</span>,
+   title: <span class="hljs-string">&quot;This is title 2&quot;</span>,
  }
 ];
 
-<span class="hljs-keyword">const</span> value = <span class="hljs-keyword">await</span> gondola.checkJSONValue(data, <span class="hljs-string">"[0].title"</span>, <span class="hljs-string">"This is title 1"</span>);</code></pre>
+<span class="hljs-keyword">const</span> value = <span class="hljs-keyword">await</span> gondola.checkJSONValue(data, <span class="hljs-string">&quot;[0].title&quot;</span>, <span class="hljs-string">&quot;This is title 1&quot;</span>);</code></pre>
 									</dd>
 								</dl>
 							</div>
@@ -382,7 +382,7 @@ gondola.checkEqual(value, <span class="hljs-string">"Hi"</span>, <span class="hl
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:703</li>
+									<li>Defined in builtin.ts:708</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -393,9 +393,9 @@ gondola.checkEqual(value, <span class="hljs-string">"Hi"</span>, <span class="hl
 								<dl class="tsd-comment-tags">
 									<dt>example</dt>
 									<dd><pre><code class="language-typescript">
-<span class="hljs-keyword">let</span> value = <span class="hljs-keyword">await</span> gondola.getText(<span class="hljs-string">"#elementId"</span>);
-gondola.checkNotEqual(value, <span class="hljs-string">"Hello"</span>);
-gondola.checkNotEqual(value, <span class="hljs-string">"Hi"</span>, <span class="hljs-string">"value should not equal 'Hi'"</span>);</code></pre>
+<span class="hljs-keyword">let</span> value = <span class="hljs-keyword">await</span> gondola.getText(<span class="hljs-string">&quot;#elementId&quot;</span>);
+gondola.checkNotEqual(value, <span class="hljs-string">&quot;Hello&quot;</span>);
+gondola.checkNotEqual(value, <span class="hljs-string">&quot;Hi&quot;</span>, <span class="hljs-string">&quot;value should not equal &#x27;Hi&#x27;&quot;</span>);</code></pre>
 									</dd>
 								</dl>
 							</div>
@@ -440,7 +440,7 @@ gondola.checkNotEqual(value, <span class="hljs-string">"Hi"</span>, <span class=
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:782</li>
+									<li>Defined in builtin.ts:787</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -452,7 +452,7 @@ gondola.checkNotEqual(value, <span class="hljs-string">"Hi"</span>, <span class=
 									<dt>example</dt>
 									<dd><pre><code class="language-typescript">
 <span class="hljs-comment">// Compare the text from a control located by an xpath with an expected value.</span>
-<span class="hljs-keyword">await</span> gondola.checkText({<span class="hljs-string">"xpath"</span>:<span class="hljs-string">"//input[@name='button_ControlTest']"</span>},<span class="hljs-string">"ButtonTest"</span>);</code></pre>
+<span class="hljs-keyword">await</span> gondola.checkText({<span class="hljs-string">&quot;xpath&quot;</span>:<span class="hljs-string">&quot;//input[@name=&#x27;button_ControlTest&#x27;]&quot;</span>},<span class="hljs-string">&quot;ButtonTest&quot;</span>);</code></pre>
 									</dd>
 								</dl>
 							</div>
@@ -482,7 +482,7 @@ gondola.checkNotEqual(value, <span class="hljs-string">"Hi"</span>, <span class=
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:795</li>
+									<li>Defined in builtin.ts:800</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -493,8 +493,8 @@ gondola.checkNotEqual(value, <span class="hljs-string">"Hi"</span>, <span class=
 								<dl class="tsd-comment-tags">
 									<dt>example</dt>
 									<dd><pre><code class="language-typescript">
-<span class="hljs-comment">// Returns `true` if the control with id "button_ControlTest" exists.</span>
-<span class="hljs-keyword">let</span> variable = <span class="hljs-keyword">await</span> gondola.doesControlExist(<span class="hljs-string">"#button_ControlTest"</span>);</code></pre>
+<span class="hljs-comment">// Returns `true` if the control with id &quot;button_ControlTest&quot; exists.</span>
+<span class="hljs-keyword">let</span> variable = <span class="hljs-keyword">await</span> gondola.doesControlExist(<span class="hljs-string">&quot;#button_ControlTest&quot;</span>);</code></pre>
 									</dd>
 								</dl>
 							</div>
@@ -521,7 +521,7 @@ gondola.checkNotEqual(value, <span class="hljs-string">"Hi"</span>, <span class=
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:807</li>
+									<li>Defined in builtin.ts:812</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -531,7 +531,7 @@ gondola.checkNotEqual(value, <span class="hljs-string">"Hi"</span>, <span class=
 								<dl class="tsd-comment-tags">
 									<dt>example</dt>
 									<dd><pre><code class="language-typescript">
-<span class="hljs-keyword">await</span> gondola.enter({<span class="hljs-string">"xpath"</span>:<span class="hljs-string">"//input[@name='textBox_ControlTest']"</span>},<span class="hljs-string">"This is example"</span>);</code></pre>
+<span class="hljs-keyword">await</span> gondola.enter({<span class="hljs-string">&quot;xpath&quot;</span>:<span class="hljs-string">&quot;//input[@name=&#x27;textBox_ControlTest&#x27;]&quot;</span>},<span class="hljs-string">&quot;This is example&quot;</span>);</code></pre>
 									</dd>
 								</dl>
 							</div>
@@ -561,7 +561,7 @@ gondola.checkNotEqual(value, <span class="hljs-string">"Hi"</span>, <span class=
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:819</li>
+									<li>Defined in builtin.ts:824</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -571,7 +571,7 @@ gondola.checkNotEqual(value, <span class="hljs-string">"Hi"</span>, <span class=
 								<dl class="tsd-comment-tags">
 									<dt>example</dt>
 									<dd><pre><code class="language-typescript">
-<span class="hljs-keyword">let</span> value = <span class="hljs-keyword">await</span> gondola.get(<span class="hljs-string">"#buttonId"</span>);</code></pre>
+<span class="hljs-keyword">let</span> value = <span class="hljs-keyword">await</span> gondola.get(<span class="hljs-string">&quot;#buttonId&quot;</span>);</code></pre>
 									</dd>
 								</dl>
 							</div>
@@ -599,7 +599,7 @@ gondola.checkNotEqual(value, <span class="hljs-string">"Hi"</span>, <span class=
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:832</li>
+									<li>Defined in builtin.ts:837</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -610,7 +610,7 @@ gondola.checkNotEqual(value, <span class="hljs-string">"Hi"</span>, <span class=
 									<dt>example</dt>
 									<dd><pre><code class="language-typescript">
 <span class="hljs-keyword">const</span> capabilities = <span class="hljs-keyword">await</span> gondola.getCapabilities();
-<span class="hljs-keyword">if</span> (capabilities.platformName === <span class="hljs-string">"android"</span>){
+<span class="hljs-keyword">if</span> (capabilities.platformName === <span class="hljs-string">&quot;android&quot;</span>){
      <span class="hljs-comment">// Do something</span>
 }</code></pre>
 									</dd>
@@ -630,7 +630,7 @@ gondola.checkNotEqual(value, <span class="hljs-string">"Hi"</span>, <span class=
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:844</li>
+									<li>Defined in builtin.ts:849</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -640,7 +640,7 @@ gondola.checkNotEqual(value, <span class="hljs-string">"Hi"</span>, <span class=
 								<dl class="tsd-comment-tags">
 									<dt>example</dt>
 									<dd><pre><code class="language-typescript">
-<span class="hljs-keyword">let</span> hrefValue = <span class="hljs-keyword">await</span> gondola.getControlProperty(<span class="hljs-string">"//a[.='Home']"</span>, <span class="hljs-string">"innerText"</span>);</code></pre>
+<span class="hljs-keyword">let</span> hrefValue = <span class="hljs-keyword">await</span> gondola.getControlProperty(<span class="hljs-string">&quot;//a[.=&#x27;Home&#x27;]&quot;</span>, <span class="hljs-string">&quot;innerText&quot;</span>);</code></pre>
 									</dd>
 								</dl>
 							</div>
@@ -673,7 +673,7 @@ gondola.checkNotEqual(value, <span class="hljs-string">"Hi"</span>, <span class=
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:856</li>
+									<li>Defined in builtin.ts:861</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -683,8 +683,8 @@ gondola.checkNotEqual(value, <span class="hljs-string">"Hi"</span>, <span class=
 								<dl class="tsd-comment-tags">
 									<dt>example</dt>
 									<dd><pre><code class="language-typescript">
-<span class="hljs-comment">// Get visible elements in control with id "buttonId1"</span>
-<span class="hljs-keyword">await</span> gondola.getElementCount(<span class="hljs-string">"#buttonId1"</span>);</code></pre>
+<span class="hljs-comment">// Get visible elements in control with id &quot;buttonId1&quot;</span>
+<span class="hljs-keyword">await</span> gondola.getElementCount(<span class="hljs-string">&quot;#buttonId1&quot;</span>);</code></pre>
 									</dd>
 								</dl>
 							</div>
@@ -711,7 +711,7 @@ gondola.checkNotEqual(value, <span class="hljs-string">"Hi"</span>, <span class=
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:985</li>
+									<li>Defined in builtin.ts:990</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -724,15 +724,15 @@ gondola.checkNotEqual(value, <span class="hljs-string">"Hi"</span>, <span class=
 <span class="hljs-keyword">const</span> data = [
  {
    id: <span class="hljs-number">1</span>,
-   title: <span class="hljs-string">"This is title 1"</span>
+   title: <span class="hljs-string">&quot;This is title 1&quot;</span>
  },
  {
    id: <span class="hljs-number">2</span>,
-   title: <span class="hljs-string">"This is title 2"</span>,
+   title: <span class="hljs-string">&quot;This is title 2&quot;</span>,
  }
 ];
 
-<span class="hljs-keyword">const</span> value = <span class="hljs-keyword">await</span> gondola.getJSONValue(data, <span class="hljs-string">"[0].title"</span>);</code></pre>
+<span class="hljs-keyword">const</span> value = <span class="hljs-keyword">await</span> gondola.getJSONValue(data, <span class="hljs-string">&quot;[0].title&quot;</span>);</code></pre>
 									</dd>
 								</dl>
 							</div>
@@ -760,7 +760,7 @@ gondola.checkNotEqual(value, <span class="hljs-string">"Hi"</span>, <span class=
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:868</li>
+									<li>Defined in builtin.ts:873</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -770,7 +770,7 @@ gondola.checkNotEqual(value, <span class="hljs-string">"Hi"</span>, <span class=
 								<dl class="tsd-comment-tags">
 									<dt>example</dt>
 									<dd><pre><code class="language-typescript">
-<span class="hljs-keyword">const</span> item = <span class="hljs-keyword">await</span> gondola.getSelectedItems(<span class="hljs-string">"#selectElementId"</span>);</code></pre>
+<span class="hljs-keyword">const</span> item = <span class="hljs-keyword">await</span> gondola.getSelectedItems(<span class="hljs-string">&quot;#selectElementId&quot;</span>);</code></pre>
 									</dd>
 								</dl>
 							</div>
@@ -798,7 +798,7 @@ gondola.checkNotEqual(value, <span class="hljs-string">"Hi"</span>, <span class=
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:769</li>
+									<li>Defined in builtin.ts:774</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -809,7 +809,7 @@ gondola.checkNotEqual(value, <span class="hljs-string">"Hi"</span>, <span class=
 									<dt>example</dt>
 									<dd><pre><code class="language-typescript">
 <span class="hljs-comment">// Get the text from control with xpath.</span>
-<span class="hljs-keyword">await</span> gondola.getText({<span class="hljs-string">"xpath"</span>:<span class="hljs-string">"//input[@name='button_ControlTest']"</span>});</code></pre>
+<span class="hljs-keyword">await</span> gondola.getText({<span class="hljs-string">&quot;xpath&quot;</span>:<span class="hljs-string">&quot;//input[@name=&#x27;button_ControlTest&#x27;]&quot;</span>});</code></pre>
 									</dd>
 								</dl>
 							</div>
@@ -836,7 +836,7 @@ gondola.checkNotEqual(value, <span class="hljs-string">"Hi"</span>, <span class=
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:1025</li>
+									<li>Defined in builtin.ts:1030</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -846,7 +846,7 @@ gondola.checkNotEqual(value, <span class="hljs-string">"Hi"</span>, <span class=
 								<dl class="tsd-comment-tags">
 									<dt>example</dt>
 									<dd><pre><code class="language-typescript">
-gondola.report(<span class="hljs-string">"This is a report"</span>)</code></pre>
+gondola.report(<span class="hljs-string">&quot;This is a report&quot;</span>)</code></pre>
 									</dd>
 									<dt>experimental</dt>
 									<dd><p>v1.3.
@@ -883,7 +883,7 @@ gondola.report(<span class="hljs-string">"This is a report"</span>)</code></pre>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:883</li>
+									<li>Defined in builtin.ts:888</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -895,8 +895,8 @@ gondola.report(<span class="hljs-string">"This is a report"</span>)</code></pre>
 								<dl class="tsd-comment-tags">
 									<dt>example</dt>
 									<dd><pre><code class="language-typescript">
-<span class="hljs-keyword">await</span> gondola.saveScreenshot(<span class="hljs-string">"screenshot.png"</span>);
-<span class="hljs-keyword">await</span> gondola.saveScreenshot(<span class="hljs-string">"screenshotFullPage.png"</span>, <span class="hljs-literal">true</span>);</code></pre>
+<span class="hljs-keyword">await</span> gondola.saveScreenshot(<span class="hljs-string">&quot;screenshot.png&quot;</span>);
+<span class="hljs-keyword">await</span> gondola.saveScreenshot(<span class="hljs-string">&quot;screenshotFullPage.png&quot;</span>, <span class="hljs-literal">true</span>);</code></pre>
 									</dd>
 								</dl>
 							</div>
@@ -929,7 +929,7 @@ gondola.report(<span class="hljs-string">"This is a report"</span>)</code></pre>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:895</li>
+									<li>Defined in builtin.ts:900</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -939,7 +939,7 @@ gondola.report(<span class="hljs-string">"This is a report"</span>)</code></pre>
 								<dl class="tsd-comment-tags">
 									<dt>example</dt>
 									<dd><pre><code class="language-typescript">
-gondola.select(<span class="hljs-string">"#selectElementId"</span>, [<span class="hljs-string">"Green"</span>, <span class="hljs-string">"Red"</span>]);</code></pre>
+gondola.select(<span class="hljs-string">&quot;#selectElementId&quot;</span>, [<span class="hljs-string">&quot;Green&quot;</span>, <span class="hljs-string">&quot;Red&quot;</span>]);</code></pre>
 									</dd>
 								</dl>
 							</div>
@@ -972,7 +972,7 @@ gondola.select(<span class="hljs-string">"#selectElementId"</span>, [<span class
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:909</li>
+									<li>Defined in builtin.ts:914</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -997,7 +997,7 @@ failed at step: <span class="hljs-subst">${errorInfo.testStepName}</span> with e
 										<p>function to be executed upon the occurrence of an error.</p>
 									</div>
 									<ul class="tsd-parameters">
-										<li class="tsd-parameter-siganture">
+										<li class="tsd-parameter-signature">
 											<ul class="tsd-signatures tsd-kind-type-literal">
 												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>errorInfo<span class="tsd-signature-symbol">: </span><a href="ierrorinfo.html" class="tsd-signature-type">IErrorInfo</a>, actor<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 											</ul>
@@ -1033,7 +1033,7 @@ failed at step: <span class="hljs-subst">${errorInfo.testStepName}</span> with e
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:925</li>
+									<li>Defined in builtin.ts:930</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1043,8 +1043,8 @@ failed at step: <span class="hljs-subst">${errorInfo.testStepName}</span> with e
 								<dl class="tsd-comment-tags">
 									<dt>example</dt>
 									<dd><pre><code class="language-typescript">
-<span class="hljs-comment">// set State = true for the element "checkboxId"</span>
-gondola.setState(<span class="hljs-string">"#checkboxId"</span>, <span class="hljs-literal">true</span>);</code></pre>
+<span class="hljs-comment">// set State = true for the element &quot;checkboxId&quot;</span>
+gondola.setState(<span class="hljs-string">&quot;#checkboxId&quot;</span>, <span class="hljs-literal">true</span>);</code></pre>
 									</dd>
 								</dl>
 							</div>
@@ -1082,7 +1082,7 @@ gondola.setState(<span class="hljs-string">"#checkboxId"</span>, <span class="hl
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:936</li>
+									<li>Defined in builtin.ts:941</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1119,7 +1119,7 @@ gondola.wait(<span class="hljs-number">5</span>);</code></pre>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:948</li>
+									<li>Defined in builtin.ts:953</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1129,7 +1129,7 @@ gondola.wait(<span class="hljs-number">5</span>);</code></pre>
 								<dl class="tsd-comment-tags">
 									<dt>example</dt>
 									<dd><pre><code class="language-typescript">
-gondola.waitForDisappear(<span class="hljs-string">"#buttonTest"</span>, <span class="hljs-number">5</span>);</code></pre>
+gondola.waitForDisappear(<span class="hljs-string">&quot;#buttonTest&quot;</span>, <span class="hljs-number">5</span>);</code></pre>
 									</dd>
 								</dl>
 							</div>
@@ -1162,7 +1162,7 @@ gondola.waitForDisappear(<span class="hljs-string">"#buttonTest"</span>, <span c
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in builtin.ts:961</li>
+									<li>Defined in builtin.ts:966</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1172,8 +1172,8 @@ gondola.waitForDisappear(<span class="hljs-string">"#buttonTest"</span>, <span c
 								<dl class="tsd-comment-tags">
 									<dt>example</dt>
 									<dd><pre><code class="language-typescript">
-<span class="hljs-comment">// Wait 5 seconds for an element with the id "#buttonTest" to be present on the page.</span>
-gondola.waitForElement(<span class="hljs-string">"#buttonTest"</span>, <span class="hljs-number">5</span>);</code></pre>
+<span class="hljs-comment">// Wait 5 seconds for an element with the id &quot;#buttonTest&quot; to be present on the page.</span>
+gondola.waitForElement(<span class="hljs-string">&quot;#buttonTest&quot;</span>, <span class="hljs-number">5</span>);</code></pre>
 									</dd>
 								</dl>
 							</div>
@@ -1329,63 +1329,13 @@ gondola.waitForElement(<span class="hljs-string">"#buttonTest"</span>, <span cla
 		<h2>Legend</h2>
 		<div class="tsd-legend-group">
 			<ul class="tsd-legend">
-				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
-				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
-				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
-				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
-				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
-				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
-				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
-				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
-				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
-				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
-				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
 				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
 				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
-				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
-				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
-				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
-				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
-				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
 			</ul>
 		</div>
 	</div>
 </footer>
 <div class="overlay"></div>
 <script src="../assets/js/main.js"></script>
-<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
 </body>
 </html>
