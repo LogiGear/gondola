@@ -175,8 +175,8 @@ gondola.checkAppIsInstalled(<span class="hljs-string">&quot;com.example.appName)
 <span class="hljs-comment">// full command: adb shell &quot;dumpsys window windows | grep -E &#x27;mCurrentFocus|mFocusedApp&#x27;&quot;</span>
 <span class="hljs-keyword">await</span> gondola.runOnAndroid(<span class="hljs-keyword">async</span> () =&gt; {
     <span class="hljs-keyword">const</span> currentAppInfo = <span class="hljs-keyword">await</span> gondola.executeCommand(<span class="hljs-string">&quot;mobile:shell&quot;</span>, [{
-        command: <span class="hljs-string">&quot;dumpsys&quot;</span>,
-        args: [
+        <span class="hljs-attr">command</span>: <span class="hljs-string">&quot;dumpsys&quot;</span>,
+        <span class="hljs-attr">args</span>: [
             <span class="hljs-string">&quot;window&quot;</span>,
             <span class="hljs-string">&quot;windows&quot;</span>,
             <span class="hljs-string">&quot;|&quot;</span>,
@@ -439,7 +439,7 @@ gondola.runOnAndroid(<span class="hljs-keyword">async</span> () =&gt; {
 });
 
 <span class="hljs-comment">// Filter can be applied by checking for capabilities. This code only run on Android 7.0</span>
-gondola.runOnAndroid({platformVersion: <span class="hljs-string">&#x27;7.0&#x27;</span>}, <span class="hljs-function">() =&gt;</span>{
+gondola.runOnAndroid({<span class="hljs-attr">platformVersion</span>: <span class="hljs-string">&#x27;7.0&#x27;</span>}, <span class="hljs-function">() =&gt;</span>{
      <span class="hljs-comment">// ...</span>
 });
 
@@ -494,7 +494,7 @@ gondola.runOnIOS(<span class="hljs-keyword">async</span> () =&gt; {
 });
 
 <span class="hljs-comment">// Filter can be applied by checking for capabilities. This code only run on runOnIOS 6.0</span>
-gondola.runOnIOS({platformVersion: <span class="hljs-string">&#x27;6.0&#x27;</span>}, <span class="hljs-function">() =&gt;</span> {
+gondola.runOnIOS({<span class="hljs-attr">platformVersion</span>: <span class="hljs-string">&#x27;6.0&#x27;</span>}, <span class="hljs-function">() =&gt;</span> {
      <span class="hljs-comment">// ...</span>
 });
 
@@ -642,7 +642,7 @@ gondola.sendDeviceKeyEvent(<span class="hljs-number">3</span>);</code></pre>
 								<dl class="tsd-comment-tags">
 									<dt>example</dt>
 									<dd><pre><code class="language-typescript">
-<span class="hljs-keyword">await</span> gondola.swipe(<span class="hljs-string">&quot;~accessibleId&quot;</span>,<span class="hljs-number">0</span>, <span class="hljs-number">-1000</span>);</code></pre>
+<span class="hljs-keyword">await</span> gondola.swipe(<span class="hljs-string">&quot;~accessibleId&quot;</span>,<span class="hljs-number">0</span>, -<span class="hljs-number">1000</span>);</code></pre>
 									</dd>
 								</dl>
 							</div>
@@ -775,10 +775,10 @@ gondola.sendDeviceKeyEvent(<span class="hljs-number">3</span>);</code></pre>
 									<dt>example</dt>
 									<dd><pre><code class="language-typescript">
 gondola.tap(<span class="hljs-string">&quot;~accessibleId&quot;</span>);
-gondola.tap({id: <span class="hljs-string">&quot;buttonId&quot;</span>});
+gondola.tap({<span class="hljs-attr">id</span>: <span class="hljs-string">&quot;buttonId&quot;</span>});
 gondola.tap({
-     android: <span class="hljs-string">&quot;//com.android.TextView[@text=&#x27;myLabel&#x27;]&quot;</span>,
-     ios: <span class="hljs-string">&quot;~myId&quot;</span>
+     <span class="hljs-attr">android</span>: <span class="hljs-string">&quot;//com.android.TextView[@text=&#x27;myLabel&#x27;]&quot;</span>,
+     <span class="hljs-attr">ios</span>: <span class="hljs-string">&quot;~myId&quot;</span>
 });</code></pre>
 									</dd>
 								</dl>
